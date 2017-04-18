@@ -118,6 +118,37 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="4" name="Set animation" sid="359410051932935" type="Player">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="663671099971368">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="706732995980453" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="289988846330441" type="Player">
+                    <param id="0" name="Animation">&quot;Land&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="653241327178976" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="374329431543935">
+            <conditions>
+                <condition id="4" name="On finished" sid="736094561670151" type="Player">
+                    <param id="0" name="Animation">&quot;Land&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="542279287589913" type="Player">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="591618994462627">
@@ -389,6 +420,10 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="945661888305895" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="312033487389997" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="0" name="Play" sid="343867476689792" type="Audio">
                             <param id="0" name="Audio file">die</param>
                             <param id="2" name="Loop">0</param>
@@ -417,12 +452,22 @@
                                 <action id="-16" name="Wait" sid="743262168079430" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="394605389774501" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="774565102757888" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="174986491435970" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="967875802727555" type="Player">
                                     <param id="0" name="Object">PlayerStart1</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="394605389774501" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="498527993050569" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -438,12 +483,22 @@
                                 <action id="-16" name="Wait" sid="115755188486975" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="783576316508949" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="360945162088138" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="561021474924515" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="500198732948706" type="Player">
                                     <param id="0" name="Object">PlayerStart2</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="783576316508949" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="528036008412831" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -459,12 +514,22 @@
                                 <action id="-16" name="Wait" sid="491783336178175" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="412597627192128" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="535172340262076" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="754300035582219" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="277980135372388" type="Player">
                                     <param id="0" name="Object">PlayerStart3</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="412597627192128" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="599441029102620" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -480,16 +545,45 @@
                                 <action id="-16" name="Wait" sid="320275436322263" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="913665972219553" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="726500353605861" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="383877254220530" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="620329630785190" type="Player">
                                     <param id="0" name="Object">PlayerStart4</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="913665972219553" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="216689732103715" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="434607673893589">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="547802889797362" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="642182194038555" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="635186059119133" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="655256497771450" type="Player">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="861731929451091">
                     <conditions>
@@ -510,6 +604,10 @@
                         </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="307682404180745" type="Player">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="770085364484518" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                         <action id="0" name="Play" sid="614553923288530" type="Audio">
                             <param id="0" name="Audio file">die</param>
@@ -539,12 +637,22 @@
                                 <action id="-16" name="Wait" sid="828342238552319" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="284492326003502" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="888557724887367" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="522889112389852" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="572588989347563" type="Player">
                                     <param id="0" name="Object">PlayerStart1</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="284492326003502" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="159803462904055" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -560,12 +668,22 @@
                                 <action id="-16" name="Wait" sid="324263560100422" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="495476429748782" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="222596718889185" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="697773780310835" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="461788879746107" type="Player">
                                     <param id="0" name="Object">PlayerStart2</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="495476429748782" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="465353374071895" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -581,12 +699,22 @@
                                 <action id="-16" name="Wait" sid="737593072465317" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="139772429301443" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="596409095368004" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="786819078073629" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="453248493122426" type="Player">
                                     <param id="0" name="Object">PlayerStart3</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="139772429301443" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="506358354452758" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -602,12 +730,22 @@
                                 <action id="-16" name="Wait" sid="379903319507080" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="546244735660631" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="547652868693168" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="732805523193453" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="520288199388033" type="Player">
                                     <param id="0" name="Object">PlayerStart4</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="546244735660631" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="614838380735301" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -652,6 +790,10 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="261314109491017" type="Player">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="323982789158809" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="0" name="Play" sid="101128260530287" type="Audio">
                             <param id="0" name="Audio file">die</param>
                             <param id="2" name="Loop">0</param>
@@ -680,12 +822,22 @@
                                 <action id="-16" name="Wait" sid="149540005263329" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="743747421404261" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="157219063624738" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="631792677427673" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="544017982347021" type="Player">
                                     <param id="0" name="Object">PlayerStart1</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="743747421404261" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="503494872878800" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -701,12 +853,22 @@
                                 <action id="-16" name="Wait" sid="594589238638296" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="211834175661116" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="773955158717683" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="902289681682704" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="764326012873958" type="Player">
                                     <param id="0" name="Object">PlayerStart2</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="211834175661116" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="523169940917010" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -722,12 +884,22 @@
                                 <action id="-16" name="Wait" sid="302941186065038" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="173262135562652" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="508134855137311" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="581035348506647" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="597743846684180" type="Player">
                                     <param id="0" name="Object">PlayerStart3</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="173262135562652" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="906733256495596" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -743,12 +915,22 @@
                                 <action id="-16" name="Wait" sid="284245509868719" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="433909164017126" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="993046295145001" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="121928022394769" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="638287515347343" type="Player">
                                     <param id="0" name="Object">PlayerStart4</param>
                                     <param id="1" name="Image point (optional)">0</param>
                                 </action>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="433909164017126" type="Player">
-                                    <param id="0" name="State">1</param>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="890278438444641" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
                                 </action>
                             </actions>
                         </event-block>
