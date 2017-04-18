@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Level 1</layout>
+        <layout order="3">EndScreen</layout>
+        <layout active="1" order="1">Level 2</layout>
+        <event-sheet order="2">Game</event-sheet>
+        <event-sheet order="4">End</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/PlatformStatic/" />
+        <folder expanded="1" path="animation-folder/Platform/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/PlayerStart1/" />
+        <folder expanded="1" path="animation-folder/levelTrigger1/" />
+        <folder expanded="1" path="animation-folder/levelTrigger2/" />
+        <folder expanded="1" path="animation-folder/BulletRight/" />
+        <folder expanded="1" path="animation-folder/BulletLeft/" />
+        <folder expanded="1" path="animation-folder/ShootLeft/" />
+        <folder expanded="1" path="animation-folder/ShootRight/" />
+        <folder expanded="1" path="animation-folder/PlayerStart2/" />
+        <folder expanded="1" path="animation-folder/PlayerStart3/" />
+        <folder expanded="1" path="animation-folder/FlashRight/" />
+        <folder expanded="1" path="animation-folder/FlashLeft/" />
+        <folder expanded="1" path="animation-folder/levelTrigger3/" />
+        <folder expanded="1" path="animation-folder/PlayerStart4/" />
+        <folder expanded="1" path="animation-folder/Goal/" />
+        <folder expanded="1" path="animation-folder/SharpObject/" />
+        <folder expanded="1" path="animation-folder/Fade/" />
+        <folder expanded="1" path="animation-folder/RedPlatform/" />
+        <folder expanded="1" path="animation-folder/C1/" />
+        <folder expanded="1" path="animation-folder/C2/" />
+        <folder expanded="1" path="animation-folder/C3/" />
+        <folder expanded="1" path="animation-folder/C4/" />
+        <folder expanded="1" path="animation-folder/Ground/" />
+        <folder expanded="1" path="animation-folder/RedScreen/" />
+    </folders-expanded>
+</c2uistate>

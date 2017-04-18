@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>End</name>
+    <events>
+        <event-block sid="173157050131188">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="482491887727573" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="628521116865104" type="DeathsText">
+                    <param id="0" name="Text">&quot;Deaths: &quot; &amp; Deaths</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="634866160421186">
+            <conditions>
+                <condition id="14" name="On tap" sid="943151524402756" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="209454426858401" type="System">
+                    <param id="0" name="Layout">Level 1</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="630447246410312" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
