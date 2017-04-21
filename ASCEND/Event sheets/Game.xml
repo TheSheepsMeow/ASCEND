@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <variable constant="0" name="TextGoBack" sid="673226776830744" static="0" type="number">0</variable>
+        <variable constant="0" name="TotalTime" sid="383302810120249" static="0" type="number">0</variable>
+        <variable constant="0" name="Timer" sid="673535074980716" static="0" type="number">0</variable>
         <include>DevCodes</include>
         <variable constant="0" name="IsSwiping" sid="962798851042372" static="0" type="number">0</variable>
         <variable constant="0" name="Complete" sid="961590963776932" static="0" type="number">0</variable>
@@ -70,552 +73,416 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="614593034377250">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="592931544150437" type="Player">
-                    <param id="0" name="Object">swipeTrigger</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="120959739516516" type="Swipe">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="717937877281413">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="330255200211508" type="Player">
-                    <param id="0" name="Object">swipeTrigger2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Destroy" id="1" name="Start fade" sid="643758898728638" type="Swipe" />
-            </actions>
-        </event-block>
-        <event-block sid="852025938189664">
-            <conditions>
-                <condition id="14" name="On tap" sid="828707225207804" type="Touch" />
-                <condition id="-3" name="Is on-screen" sid="397167092936963" type="Player" />
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="529609950427097" type="Player">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="357377245167971">
-            <conditions>
-                <condition id="7" name="Compare touch speed" sid="766523291839358" type="Touch">
-                    <param id="0" name="Touch index">0</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Speed">1000</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="228820629723194" type="System">
-                    <param id="0" name="Variable">IsSwiping</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="227252174395332" title="Player/Animations">
             <sub-events>
-                <event-block sid="199274348209755">
+                <event-block sid="852025938189664">
                     <conditions>
-                        <condition id="-21" name="Is between values" sid="456954654912632" type="System">
-                            <param id="0" name="Value">Touch.AngleAt(0)</param>
-                            <param id="1" name="Lower bound">65</param>
-                            <param id="2" name="Upper bound">115</param>
-                        </condition>
+                        <condition id="14" name="On tap" sid="828707225207804" type="Touch" />
+                        <condition id="-3" name="Is on-screen" sid="397167092936963" type="Player" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="182633613722838" type="System">
-                            <param id="0" name="Variable">IsSwiping</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="240937938146347" type="System">
-                            <param id="0" name="Seconds">0.2</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="131933684067199" type="System">
-                            <param id="0" name="Variable">IsSwiping</param>
-                            <param id="1" name="Value">0</param>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="529609950427097" type="Player">
+                            <param id="0" name="Control">2</param>
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="423870203082606">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="550106217290150" type="System">
-                    <param id="0" name="Variable">IsSwiping</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="553327391207938" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="762853739262722" type="Player" />
-            </actions>
-        </event-block>
-        <event-block sid="449668962130765">
-            <conditions>
-                <condition behavior="Platform" id="5" name="On jump" sid="157475005945202" type="Player" />
-            </conditions>
-            <actions>
-                <action id="0" name="Play" sid="670113452467978" type="Audio">
-                    <param id="0" name="Audio file">Jump 20</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action id="4" name="Set animation" sid="359410051932935" type="Player">
-                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="663671099971368">
-            <conditions>
-                <condition behavior="Platform" id="9" name="On landed" sid="706732995980453" type="Player" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="289988846330441" type="Player">
-                    <param id="0" name="Animation">&quot;Land&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="653241327178976" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="374329431543935">
-            <conditions>
-                <condition id="4" name="On finished" sid="736094561670151" type="Player">
-                    <param id="0" name="Animation">&quot;Land&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="542279287589913" type="Player">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="591618994462627">
-            <conditions>
-                <condition id="-4" name="Is outside layout" sid="482804188745115" type="Player" />
-                <condition behavior="Platform" id="4" name="Is falling" sid="352913830598321" type="Player" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="805705667125734">
+                <event-block sid="243631086527702">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="701656816773510" type="System">
-                            <param id="0" name="Variable">Level</param>
+                        <condition id="1" name="On any touch end" sid="898216820884204" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="675362847940658" type="System">
+                            <param id="0" name="Variable">IsSwiping</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="417520007601497" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290697814644661">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="957633959679404" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="860557931748647" type="Player">
+                            <param id="0" name="Animation">&quot;Anticipate&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="407208410634866">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is in touch" sid="850860574339606" type="Touch" />
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="485974946628759" type="Player" />
+                        <condition id="2" inverted="1" name="Is playing" sid="852399106522904" type="Player">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="540627242124931" type="Player">
+                            <param id="0" name="Animation">&quot;Land&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="534037706183307" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="182529820239692" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="357377245167971">
+                    <conditions>
+                        <condition id="7" name="Compare touch speed" sid="766523291839358" type="Touch">
+                            <param id="0" name="Touch index">0</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Speed">1000</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="228820629723194" type="System">
+                            <param id="0" name="Variable">IsSwiping</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="199274348209755">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="456954654912632" type="System">
+                                    <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                    <param id="1" name="Lower bound">65</param>
+                                    <param id="2" name="Upper bound">115</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="182633613722838" type="System">
+                                    <param id="0" name="Variable">IsSwiping</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="240937938146347" type="System">
+                                    <param id="0" name="Seconds">0.2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="131933684067199" type="System">
+                                    <param id="0" name="Variable">IsSwiping</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="423870203082606">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="550106217290150" type="System">
+                            <param id="0" name="Variable">IsSwiping</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="277816041624196" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="553327391207938" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="954559049747650" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="102986532320469" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="337782634063287" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="757127901982839" type="Audio">
-                            <param id="0" name="Audio file">die</param>
+                        <action behavior="Platform" id="12" name="Fall through" sid="762853739262722" type="Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="449668962130765">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="157475005945202" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="670113452467978" type="Audio">
+                            <param id="0" name="Audio file">Jump 20</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
+                            <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action id="-10" name="Add to" sid="795772387952008" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="794807226396854" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="590306571749612" type="RedScreen" />
-                        <action id="-16" name="Wait" sid="174568333278342" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="769013897411318" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="127573220537467" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="837401372036338" type="Player">
+                        <action id="4" name="Set animation" sid="359410051932935" type="Player">
                             <param id="0" name="Animation">&quot;Jump&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="350496401981288" type="Player">
-                            <param id="0" name="Object">PlayerStart1</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="345710500667428" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="588642287588651">
+                <event-block sid="663671099971368">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="811237078884958" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="494628375005055" type="System" />
+                        <condition behavior="Platform" id="9" name="On landed" sid="706732995980453" type="Player" />
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="505301850762951" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="987391205350212" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="302887978813919" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        <action id="4" name="Set animation" sid="289988846330441" type="Player">
+                            <param id="0" name="Animation">&quot;Land&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Play" sid="218674945629374" type="Audio">
-                            <param id="0" name="Audio file">die</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="677106922057344" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="629170295937412" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="127371329656393" type="RedScreen" />
-                        <action id="-16" name="Wait" sid="898036872961201" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="451419790044570" type="Player">
+                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="653241327178976" type="Player">
                             <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="296303413438018" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="786814053661923" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="576931092488400" type="Player">
-                            <param id="0" name="Object">PlayerStart2</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="235272849311537" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="388779020587514">
+                <event-block sid="374329431543935">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="916824710359580" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
+                        <condition id="4" name="On finished" sid="736094561670151" type="Player">
+                            <param id="0" name="Animation">&quot;Land&quot;</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="655439306114739" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="968749979076620" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="189990722272594" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="248855382484236" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        <action id="4" name="Set animation" sid="542279287589913" type="Player">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="300428140622739" type="Audio">
-                            <param id="0" name="Audio file">die</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="736653349398688" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="282732413707174" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="386446440805059" type="RedScreen" />
-                        <action id="-16" name="Wait" sid="713738173299387" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="858875104227202" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="851680606662842" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="916122961448286" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="762353214927098" type="Player">
-                            <param id="0" name="Object">PlayerStart3</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="754084427026019" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="438298283627215">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="979802818054915" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="660884937816214" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="992379153344045" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="876147397300260" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="682078978086354" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="413544581627146" type="Audio">
-                            <param id="0" name="Audio file">die</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="858990840647372" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="704262080896319" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="943449916423430" type="RedScreen" />
-                        <action id="-16" name="Wait" sid="560838871853831" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="964793051079024" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="925714452514420" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="889153426041268" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="640964237276442" type="Player">
-                            <param id="0" name="Object">PlayerStart4</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="603281465234559" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="890988910216720">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="245355108166778" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="181666512871579" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="547086559122604" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="573660196465673" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="521935350593801" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="175548546780066" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="279755463864757" type="Audio">
-                            <param id="0" name="Audio file">die</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="869300897094073" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="384497276538622" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="399798159506272" type="RedScreen" />
-                        <action behavior="Platform" id="11" name="Set enabled" sid="758786181594261" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="527295166566049" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="638823335877186" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="948535560578287" type="Player">
-                            <param id="0" name="Object">PlayerStart5</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="560424485242196" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="634337695349201">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="983179391077348" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="931596402619837" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="764983351551038" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="908037163497087" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="539882333026166" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="839083438116731" type="Audio">
-                            <param id="0" name="Audio file">die</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="899078628283425" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="392456078767204" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="967060457982064" type="RedScreen" />
-                        <action id="-16" name="Wait" sid="658132700440464" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="478081115444152" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="549492425144339" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="930333322719315" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="645265357929175" type="Player">
-                            <param id="0" name="Object">PlayerStart6</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="690988082551259" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="641609170989050">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="346269979557965" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">7</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="657408694317572" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="651768298199431" type="Camera">
-                            <param id="0" name="Magnitude">20</param>
-                            <param id="1" name="Duration">0.4</param>
-                            <param id="2" name="Mode">0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="419371625399940" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="759666016383660" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Play" sid="102157832041505" type="Audio">
-                            <param id="0" name="Audio file">die</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="874646129717244" type="System">
-                            <param id="0" name="Variable">Deaths</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="657370884103617" type="RedScreen">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="0" name="Restart fade" sid="587227504828874" type="RedScreen" />
-                        <action id="-16" name="Wait" sid="918991008513153" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="489488313213573" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="778479326210798" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="422158994332187" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="548401386681743" type="Player">
-                            <param id="0" name="Object">PlayerStart7</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="138801450297464" type="Player">
-                            <param id="0" name="Vector Y">-400</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <event-group description="" sid="734681683289030" title="ChangeLevels">
             <sub-events>
+                <event-block sid="799463496815508">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="689693872905146" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Level 1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="977813566574524">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="428371559530859" type="Player">
+                                    <param id="0" name="Object">Goal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="677474748162552" type="System">
+                                    <param id="0" name="Variable">Complete</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="530733038505952" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="428313641176874" type="Goal">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="339858652521593" type="Goal" />
+                                <action id="0" name="Play" sid="629472323231489" type="Audio">
+                                    <param id="0" name="Audio file">levelComplete</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="271719267412379" type="Fade">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="745303655468611" type="Fade" />
+                                <action id="-16" name="Wait" sid="776144073029820" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="677787506936567" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="768566851382621" type="System">
+                                    <param id="0" name="Variable">Complete</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="935097164326810" type="System">
+                                    <param id="0" name="Layout">Level 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="423925865202709">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="168305085518329" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Level 2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="171464356806165">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="496969199572425" type="Player">
+                                    <param id="0" name="Object">Goal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="450534732779832" type="System">
+                                    <param id="0" name="Variable">Complete</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="153204403860295" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="185404873531823" type="Goal">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="791589508235866" type="Goal" />
+                                <action id="0" name="Play" sid="580382225086201" type="Audio">
+                                    <param id="0" name="Audio file">levelComplete</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="105886993143039" type="Fade">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="351010877158125" type="Fade" />
+                                <action id="-16" name="Wait" sid="431467051707652" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="823029457234007" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="994344233337687" type="System">
+                                    <param id="0" name="Variable">Complete</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="699954907821779" type="System">
+                                    <param id="0" name="Layout">EndScreen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="275115542456589">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="257069024733158" type="System">
+                            <param id="0" name="Variable">Complete</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="794618107145165" type="Player">
+                            <param id="0" name="Width">lerp(Self.Width, 0, 0.03)</param>
+                            <param id="1" name="Height">lerp(Self.Height, 0, 0.03)</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="667614877472508" type="Camera">
+                            <param id="0" name="Y">lerp(Self.Y, 88, 0.05)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="708532984942582" type="Player">
+                            <param id="0" name="X">lerp(Self.X, Goal.X, 0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y, Goal.Y, 0.03)</param>
+                        </action>
+                        <action id="-20" name="Set layout scale" sid="141441663736842" type="System">
+                            <param id="0" name="Scale">lerp(LayoutScale, 2.0, 0.05)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="444384030206132">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="671981788152314" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="117046574964337" type="Timer">
+                            <param id="0" name="X">lerp(Self.X, 320, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 32, 0.05)</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="525929710248922" type="Timer">
+                            <param id="0" name="Scale">0.35</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="995655876997177" type="DeathsText">
+                            <param id="0" name="X">lerp(Self.X, 320, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 0, 0.05)</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="677339812513048" type="DeathsText">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="553823202464131" type="DeathsText">
+                            <param id="0" name="Scale">0.35</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="743030701240980">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="518235013757079" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="741085147950329" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="767741067380400" type="System">
+                                    <param id="0" name="Variable">TextGoBack</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="591742709880162" type="Timer">
+                                    <param id="0" name="Duration">Infinity</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="212719377037327">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="212378113886580" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="401528495221767" type="Timer">
+                            <param id="0" name="X">lerp(Self.X, 248, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 224, 0.05)</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="954172515565132" type="Timer">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Set position" sid="422349459705742" type="DeathsText">
+                            <param id="0" name="X">lerp(Self.X, 280, 0.05)</param>
+                            <param id="1" name="Y">lerp(Self.Y, 192, 0.05)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="578860337180197" type="DeathsText">
+                            <param id="0" name="X">280</param>
+                            <param id="1" name="Y">192</param>
+                        </action>
+                        <action id="2" name="Set scale" sid="489247468235046" type="DeathsText">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="232699880794096">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="868208401468964" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="135247897894852" type="System">
+                                    <param id="0" name="Variable">TotalTime</param>
+                                    <param id="1" name="Value">Timer.Timer.TotalTime(&quot;&quot;)</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="906504610274709" type="Timer">
+                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                </action>
+                                <action disabled="1" id="-15" name="Set visible" sid="952247653146503" type="Timer">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Set value" sid="760662709396272" type="System">
+                                    <param id="0" name="Variable">Timer</param>
+                                    <param id="1" name="Value">left(str(Timer.Timer.TotalTime(&quot;&quot;)), 6)</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="839422654942461" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="971059894565529" type="Timer">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="360088101879532" type="System">
+                                    <param id="0" name="Variable">TextGoBack</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="940036868138706" type="Timer">
+                                    <param id="0" name="Text">Timer</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="952962928939343">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="520706545450405" type="Player">
@@ -634,6 +501,10 @@
                         <action id="-9" name="Set value" sid="160166845267467" type="System">
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">2</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="916431567327660" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                         <action id="0" name="Play" sid="301250595568341" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
@@ -700,6 +571,10 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">3</param>
                         </action>
+                        <action disabled="1" id="-9" name="Set value" sid="758663101236348" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
                         <action id="0" name="Play" sid="357961958208191" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
@@ -761,6 +636,10 @@
                         <action id="-9" name="Set value" sid="139338188258976" type="System">
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">4</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="854657112575841" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                         <action id="0" name="Play" sid="490696447080758" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
@@ -824,6 +703,10 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">5</param>
                         </action>
+                        <action disabled="1" id="-9" name="Set value" sid="640730493039747" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
                         <action id="0" name="Play" sid="177207822678680" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
@@ -885,6 +768,10 @@
                         <action id="-9" name="Set value" sid="147527527855378" type="System">
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">6</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="375715907907554" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                         <action id="0" name="Play" sid="996006815266914" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
@@ -948,6 +835,10 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">7</param>
                         </action>
+                        <action disabled="1" id="-9" name="Set value" sid="634474500264239" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
                         <action id="0" name="Play" sid="273735874569900" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
@@ -995,6 +886,424 @@
         </event-group>
         <event-group description="" sid="283553088963681" title="Bullets &amp; Deaths">
             <sub-events>
+                <event-block sid="591618994462627">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="482804188745115" type="Player" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="352913830598321" type="Player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="805705667125734">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="701656816773510" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="277816041624196" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="954559049747650" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="102986532320469" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="337782634063287" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="757127901982839" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="795772387952008" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="794807226396854" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="590306571749612" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="174568333278342" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="769013897411318" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="127573220537467" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="837401372036338" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="350496401981288" type="Player">
+                                    <param id="0" name="Object">PlayerStart1</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="345710500667428" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="588642287588651">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="811237078884958" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="494628375005055" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="505301850762951" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="987391205350212" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="302887978813919" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="218674945629374" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="677106922057344" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="629170295937412" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="127371329656393" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="898036872961201" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="451419790044570" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="296303413438018" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="786814053661923" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="576931092488400" type="Player">
+                                    <param id="0" name="Object">PlayerStart2</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="235272849311537" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="388779020587514">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="916824710359580" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="655439306114739" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="968749979076620" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="189990722272594" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="248855382484236" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="300428140622739" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="736653349398688" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="282732413707174" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="386446440805059" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="713738173299387" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="858875104227202" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="851680606662842" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="916122961448286" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="762353214927098" type="Player">
+                                    <param id="0" name="Object">PlayerStart3</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="754084427026019" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="438298283627215">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="979802818054915" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="660884937816214" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="992379153344045" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="876147397300260" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="682078978086354" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="413544581627146" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="858990840647372" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="704262080896319" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="943449916423430" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="560838871853831" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="964793051079024" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="925714452514420" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="889153426041268" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="640964237276442" type="Player">
+                                    <param id="0" name="Object">PlayerStart4</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="603281465234559" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="890988910216720">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="245355108166778" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="181666512871579" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="547086559122604" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="573660196465673" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="521935350593801" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="175548546780066" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="279755463864757" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="869300897094073" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="384497276538622" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="399798159506272" type="RedScreen" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="758786181594261" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="527295166566049" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="638823335877186" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="948535560578287" type="Player">
+                                    <param id="0" name="Object">PlayerStart5</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="560424485242196" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="634337695349201">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="983179391077348" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="931596402619837" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="764983351551038" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="908037163497087" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="539882333026166" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="839083438116731" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="899078628283425" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="392456078767204" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="967060457982064" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="658132700440464" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="478081115444152" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="549492425144339" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="930333322719315" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="645265357929175" type="Player">
+                                    <param id="0" name="Object">PlayerStart6</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="690988082551259" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="641609170989050">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="346269979557965" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="915243860742763" type="System">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="657408694317572" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="651768298199431" type="Camera">
+                                    <param id="0" name="Magnitude">20</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="419371625399940" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="759666016383660" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="102157832041505" type="Audio">
+                                    <param id="0" name="Audio file">die</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="874646129717244" type="System">
+                                    <param id="0" name="Variable">Deaths</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="657370884103617" type="RedScreen">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="0" name="Restart fade" sid="587227504828874" type="RedScreen" />
+                                <action id="-16" name="Wait" sid="918991008513153" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="489488313213573" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="778479326210798" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="422158994332187" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="548401386681743" type="Player">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="138801450297464" type="Player">
+                                    <param id="0" name="Vector Y">-400</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="878297239425071">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="335525652069103" type="Player">
@@ -1039,6 +1348,10 @@
                         <action id="-13" name="Set boolean" sid="236553042384175" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="622831205771368" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1259,6 +1572,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">7</param>
                                 </condition>
+                                <condition id="-16" name="Pick random instance" sid="188037074134933" type="System">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-16" name="Wait" sid="197348505664555" type="System">
@@ -1352,6 +1668,10 @@
                         <action id="-13" name="Set boolean" sid="843924436536163" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="634706120195925" type="System">
+                            <param id="0" name="Variable">TextGoBack</param>
+                            <param id="1" name="Value">-1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1572,6 +1892,9 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">7</param>
                                 </condition>
+                                <condition id="-16" name="Pick random instance" sid="777512560465194" type="System">
+                                    <param id="0" name="Object">PlayerStart7</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-16" name="Wait" sid="555031147570655" type="System">
@@ -1670,6 +1993,10 @@
                                 <action id="-13" name="Set boolean" sid="180013291578449" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="353644563039315" type="System">
+                                    <param id="0" name="Variable">TextGoBack</param>
+                                    <param id="1" name="Value">-1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -1890,6 +2217,9 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">7</param>
                                         </condition>
+                                        <condition id="-16" name="Pick random instance" sid="398909979595470" type="System">
+                                            <param id="0" name="Object">PlayerStart7</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-16" name="Wait" sid="987457376255292" type="System">
@@ -1968,143 +2298,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="799463496815508">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="689693872905146" type="System">
-                    <param id="0" name="First value">LayoutName</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;Level 1&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="977813566574524">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="428371559530859" type="Player">
-                            <param id="0" name="Object">Goal</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="677474748162552" type="System">
-                            <param id="0" name="Variable">Complete</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="530733038505952" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="428313641176874" type="Goal">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="339858652521593" type="Goal" />
-                        <action id="0" name="Play" sid="629472323231489" type="Audio">
-                            <param id="0" name="Audio file">levelComplete</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="271719267412379" type="Fade">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="745303655468611" type="Fade" />
-                        <action id="-16" name="Wait" sid="776144073029820" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="677787506936567" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="768566851382621" type="System">
-                            <param id="0" name="Variable">Complete</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="935097164326810" type="System">
-                            <param id="0" name="Layout">Level 2</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="423925865202709">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="168305085518329" type="System">
-                    <param id="0" name="First value">LayoutName</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">&quot;Level 2&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="171464356806165">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="496969199572425" type="Player">
-                            <param id="0" name="Object">Goal</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="450534732779832" type="System">
-                            <param id="0" name="Variable">Complete</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Platform" id="11" name="Set enabled" sid="153204403860295" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="185404873531823" type="Goal">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="791589508235866" type="Goal" />
-                        <action id="0" name="Play" sid="580382225086201" type="Audio">
-                            <param id="0" name="Audio file">levelComplete</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="105886993143039" type="Fade">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="351010877158125" type="Fade" />
-                        <action id="-16" name="Wait" sid="431467051707652" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="823029457234007" type="System">
-                            <param id="0" name="Variable">Level</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="994344233337687" type="System">
-                            <param id="0" name="Variable">Complete</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="699954907821779" type="System">
-                            <param id="0" name="Layout">EndScreen</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="275115542456589">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="257069024733158" type="System">
-                    <param id="0" name="Variable">Complete</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-7" name="Set size" sid="794618107145165" type="Player">
-                    <param id="0" name="Width">lerp(Self.Width, 0, 0.03)</param>
-                    <param id="1" name="Height">lerp(Self.Height, 0, 0.03)</param>
-                </action>
-                <action id="-2" name="Set Y" sid="667614877472508" type="Camera">
-                    <param id="0" name="Y">lerp(Self.Y, 88, 0.05)</param>
-                </action>
-                <action id="-3" name="Set position" sid="708532984942582" type="Player">
-                    <param id="0" name="X">lerp(Self.X, Goal.X, 0.03)</param>
-                    <param id="1" name="Y">lerp(Self.Y, Goal.Y, 0.03)</param>
-                </action>
-                <action id="-20" name="Set layout scale" sid="141441663736842" type="System">
-                    <param id="0" name="Scale">lerp(LayoutScale, 2.0, 0.05)</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="990715457237831">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="835470984759138" type="System">
@@ -2124,38 +2317,141 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="877288391637330">
-            <conditions>
-                <condition behavior="FadeOut" id="0" name="On fade-out finished" sid="388235388009536" type="Swipe" />
-            </conditions>
-            <actions>
-                <action behavior="FadeIn" id="0" name="Restart fade" sid="132391281281784" type="Swipe" />
-                <action id="4" name="Set animation" sid="315694645964883" type="tappingGesture">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Sine" id="5" name="Set cycle position" sid="775030318446021" type="Swipe">
-                    <param id="0" name="Cycle position">0</param>
-                </action>
-                <action behavior="FadeOut" id="0" name="Restart fade" sid="116064441021656" type="Swipe" />
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="424263098706458">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="424237220097188" type="System">
-                    <param id="0" name="First value">Swipe.Sine.CyclePosition</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">0</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="133584206712757" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="FadeIn" id="0" name="Restart fade" sid="226742692468968" type="Swipe" />
-                <action id="-16" name="Wait" sid="572217860784833" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action behavior="FadeOut" id="0" name="Restart fade" sid="754897815427902" type="Swipe" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="624510045956751" title="UI">
+            <sub-events>
+                <event-block sid="776250747529938">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="141193748113726" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="438224813973735" type="Timer">
+                            <param id="0" name="Duration">Infinity</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="614593034377250">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="592931544150437" type="Player">
+                            <param id="0" name="Object">swipeTrigger</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="120959739516516" type="Swipe">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="717937877281413">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="330255200211508" type="Player">
+                            <param id="0" name="Object">swipeTrigger2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Destroy" id="1" name="Start fade" sid="643758898728638" type="Swipe" />
+                    </actions>
+                </event-block>
+                <event-block sid="877288391637330">
+                    <conditions>
+                        <condition behavior="FadeOut" id="0" name="On fade-out finished" sid="388235388009536" type="Swipe" />
+                    </conditions>
+                    <actions>
+                        <action behavior="FadeIn" id="0" name="Restart fade" sid="132391281281784" type="Swipe" />
+                        <action id="4" name="Set animation" sid="315694645964883" type="tappingGesture">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Sine" id="5" name="Set cycle position" sid="775030318446021" type="Swipe">
+                            <param id="0" name="Cycle position">0</param>
+                        </action>
+                        <action behavior="FadeOut" id="0" name="Restart fade" sid="116064441021656" type="Swipe" />
+                    </actions>
+                </event-block>
+                <event-block sid="930923734617939">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="218169172853678" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="903631470674891" type="DeathsText">
+                            <param id="0" name="Text">&quot;deaths: &quot; &amp; Deaths</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="666264669014260">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="227687858654233" type="System">
+                                    <param id="0" name="Value">Timer.Timer.CurrentTime(&quot;&quot;)</param>
+                                    <param id="1" name="Lower bound">0.01</param>
+                                    <param id="2" name="Upper bound">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="486625782378663" type="Timer">
+                                    <param id="0" name="Text">left(str(Timer.Timer.CurrentTime(&quot;&quot;)), 5)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="267738446522651">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="259015331867079" type="System">
+                                    <param id="0" name="Value">Timer.Timer.CurrentTime(&quot;&quot;)</param>
+                                    <param id="1" name="Lower bound">10</param>
+                                    <param id="2" name="Upper bound">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="706767504305875" type="Timer">
+                                    <param id="0" name="Text">left(str(Timer.Timer.CurrentTime(&quot;&quot;)), 6)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="921637602971517">
+                            <conditions>
+                                <condition id="-21" name="Is between values" sid="418873732064643" type="System">
+                                    <param id="0" name="Value">Timer.Timer.CurrentTime(&quot;&quot;)</param>
+                                    <param id="1" name="Lower bound">100</param>
+                                    <param id="2" name="Upper bound">999</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="499233128476759" type="Timer">
+                                    <param id="0" name="Text">left(str(Timer.Timer.CurrentTime(&quot;&quot;)), 7)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="596477227606615">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="181872332104985" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="222123506585067" type="LevelsUI">
+                                    <param id="0" name="Text">&quot;1-&quot; &amp; Level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="218858408227591">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="649036411433665" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="510286433028433" type="LevelsUI">
+                                    <param id="0" name="Text">&quot;2-&quot; &amp; Level</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

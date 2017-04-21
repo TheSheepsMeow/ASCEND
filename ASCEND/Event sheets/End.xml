@@ -9,7 +9,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="628521116865104" type="DeathsText">
-                    <param id="0" name="Text">&quot;Deaths: &quot; &amp; Deaths</param>
+                    <param id="0" name="Text">&quot;deaths: &quot; &amp; Deaths</param>
                 </action>
             </actions>
         </event-block>

@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3jv3hs0fp0y98</unique-id>
-    <saved-with-version>23900</saved-with-version>
+    <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
@@ -75,6 +76,10 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148052539788759" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Anticipate" pingpong="0" repeatcount="1" repeatto="0" sid="687199120802691" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.506667" hotspotY="0.5" />
                 </animation>
                 <animation framecount="5" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="622965854401073" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -484,13 +489,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="General" sid="812776249321660">
+        <object-type name="LevelsUI" sid="812776249321660">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Josiah\Desktop\Internship\SpriteFont_Inconsolata_Regular_(48)_[0,0,0,0]_26x44.png" />
+            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadow.png" />
         </object-type>
         <object-type name="DeathsText" sid="272266954318724">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Josiah\Desktop\Internship\SpriteFont_Inconsolata_Regular_(48)_[0,0,0,0]_26x44.png" />
+            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadow.png" />
         </object-type>
         <object-type name="Gray" sid="841163219453463">
             <plugin id="TiledBg" />
@@ -723,6 +728,15 @@
         <object-type name="Keyboard" sid="311277810713954">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type name="Timer" sid="205706961203986">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Timer" sid="603991995486198">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadow.png" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Swipe" plugin-id="Sprite" sid="595542049986699">
@@ -750,11 +764,13 @@
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
         <layout>EndScreen.xml</layout>
+        <layout>Title.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game.xml</event-sheet>
         <event-sheet>End.xml</event-sheet>
         <event-sheet>DevCodes.xml</event-sheet>
+        <event-sheet>MainMenu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="2">
