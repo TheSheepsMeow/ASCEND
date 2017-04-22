@@ -4,7 +4,8 @@
     <name>Game</name>
     <events>
         <variable constant="0" name="TextGoBack" sid="673226776830744" static="0" type="number">0</variable>
-        <variable constant="0" name="TotalTime" sid="383302810120249" static="0" type="number">0</variable>
+        <variable constant="0" name="ShowTime" sid="991453449417589" static="0" type="number">0</variable>
+        <variable constant="0" name="Minutes" sid="383302810120249" static="0" type="number">0</variable>
         <variable constant="0" name="Timer" sid="673535074980716" static="0" type="number">0</variable>
         <include>DevCodes</include>
         <variable constant="0" name="IsSwiping" sid="962798851042372" static="0" type="number">0</variable>
@@ -377,20 +378,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="117046574964337" type="Timer">
-                            <param id="0" name="X">lerp(Self.X, 320, 0.05)</param>
-                            <param id="1" name="Y">lerp(Self.Y, 32, 0.05)</param>
-                        </action>
-                        <action id="2" name="Set scale" sid="525929710248922" type="Timer">
-                            <param id="0" name="Scale">0.35</param>
-                        </action>
                         <action id="-3" name="Set position" sid="995655876997177" type="DeathsText">
-                            <param id="0" name="X">lerp(Self.X, 320, 0.05)</param>
+                            <param id="0" name="X">lerp(Self.X, 312, 0.05)</param>
                             <param id="1" name="Y">lerp(Self.Y, 0, 0.05)</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Set position" sid="677339812513048" type="DeathsText">
-                            <param id="0" name="X">320</param>
-                            <param id="1" name="Y">0</param>
                         </action>
                         <action id="2" name="Set scale" sid="553823202464131" type="DeathsText">
                             <param id="0" name="Scale">0.35</param>
@@ -409,11 +399,6 @@
                                     <param id="0" name="Variable">TextGoBack</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action behavior="Timer" id="0" name="Start timer" sid="591742709880162" type="Timer">
-                                    <param id="0" name="Duration">Infinity</param>
-                                    <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;&quot;</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -427,19 +412,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="401528495221767" type="Timer">
-                            <param id="0" name="X">lerp(Self.X, 248, 0.05)</param>
-                            <param id="1" name="Y">lerp(Self.Y, 224, 0.05)</param>
-                        </action>
-                        <action id="2" name="Set scale" sid="954172515565132" type="Timer">
-                            <param id="0" name="Scale">0.5</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Set position" sid="422349459705742" type="DeathsText">
-                            <param id="0" name="X">lerp(Self.X, 280, 0.05)</param>
-                            <param id="1" name="Y">lerp(Self.Y, 192, 0.05)</param>
-                        </action>
                         <action id="-3" name="Set position" sid="578860337180197" type="DeathsText">
-                            <param id="0" name="X">280</param>
+                            <param id="0" name="X">264</param>
                             <param id="1" name="Y">192</param>
                         </action>
                         <action id="2" name="Set scale" sid="489247468235046" type="DeathsText">
@@ -452,36 +426,43 @@
                                 <condition id="-4" name="Trigger once while true" sid="868208401468964" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-10" name="Add to" sid="135247897894852" type="System">
-                                    <param id="0" name="Variable">TotalTime</param>
-                                    <param id="1" name="Value">Timer.Timer.TotalTime(&quot;&quot;)</param>
-                                </action>
-                                <action behavior="Timer" id="1" name="Stop timer" sid="906504610274709" type="Timer">
-                                    <param id="0" name="Tag">&quot;&quot;</param>
-                                </action>
-                                <action disabled="1" id="-15" name="Set visible" sid="952247653146503" type="Timer">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="760662709396272" type="System">
-                                    <param id="0" name="Variable">Timer</param>
-                                    <param id="1" name="Value">left(str(Timer.Timer.TotalTime(&quot;&quot;)), 6)</param>
-                                </action>
                                 <action id="-16" name="Wait" sid="839422654942461" type="System">
                                     <param id="0" name="Seconds">1.0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="971059894565529" type="Timer">
-                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="360088101879532" type="System">
                                     <param id="0" name="Variable">TextGoBack</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="940036868138706" type="Timer">
-                                    <param id="0" name="Text">Timer</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="166448716447004">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="368381686987380" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="513718319725808" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="853159488637169" type="Timer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="631622537448462" type="Timer" />
+                    </actions>
+                </event-block>
+                <event-block sid="527433888454473">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="123954752604690" type="Timer" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="207950454370455" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="952962928939343">
                     <conditions>
@@ -502,15 +483,15 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">2</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="916431567327660" type="System">
-                            <param id="0" name="Variable">TextGoBack</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="0" name="Play" sid="301250595568341" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="199967199026395" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -571,15 +552,15 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">3</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="758663101236348" type="System">
-                            <param id="0" name="Variable">TextGoBack</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="0" name="Play" sid="357961958208191" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="537924882871550" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -637,15 +618,15 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">4</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="854657112575841" type="System">
-                            <param id="0" name="Variable">TextGoBack</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="0" name="Play" sid="490696447080758" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="820581694210498" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -703,15 +684,15 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">5</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="640730493039747" type="System">
-                            <param id="0" name="Variable">TextGoBack</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="0" name="Play" sid="177207822678680" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="539234750870114" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -769,15 +750,15 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">6</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="375715907907554" type="System">
-                            <param id="0" name="Variable">TextGoBack</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="0" name="Play" sid="996006815266914" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="459668315438134" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -835,15 +816,15 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">7</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="634474500264239" type="System">
-                            <param id="0" name="Variable">TextGoBack</param>
-                            <param id="1" name="Value">-1</param>
-                        </action>
                         <action id="0" name="Play" sid="273735874569900" type="Audio">
                             <param id="0" name="Audio file">levelchange</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="328755319745168" type="System">
+                            <param id="0" name="Variable">ShowTime</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2293,6 +2274,44 @@
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="101004491814317">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="306776876799952" type="System">
+                                            <param id="0" name="Object">BulletLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="884702202853970" type="BulletLeft">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="708744434137977" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="682060425874138" type="BulletLeft">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="228028359881895">
+                                    <conditions>
+                                        <condition id="-19" name="Pick all" sid="408702602365813" type="System">
+                                            <param id="0" name="Object">BulletRight</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Sine" id="0" name="Set active" sid="225926164620065" type="BulletRight">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="288651821479843" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="657955595156983" type="BulletRight">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2305,17 +2324,124 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="101514524182832" type="Platform">
-                    <param id="0" name="Object">PlatformFade</param>
-                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                <action id="0" name="Spawn another object" sid="248595014137321" type="BulletLeft">
+                    <param id="0" name="Object">BulletFadeLeft</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="246524068763026" type="RedPlatform">
-                    <param id="0" name="Object">PlatformFadeRed</param>
-                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                <action id="-29" name="Move to object" sid="469794637803922" type="BulletFadeLeft">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">BulletLeft</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="301187905254861" type="BulletRight">
+                    <param id="0" name="Object">BulletFadeRight</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="768486094987955" type="BulletFadeRight">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-29" name="Move to object" sid="862218028348041" type="BulletFadeRight">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">BulletRight</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="584262781856933">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="798967351464650" type="System">
+                            <param id="0" name="Object">Platform</param>
+                            <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">-180</param>
+                        </condition>
+                        <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="435800885136845" type="Platform" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="737056493172259" type="Platform">
+                            <param id="0" name="Object">PlatformFade2</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="565776863192910" type="PlatformFade2">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="326620356113493">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="221167325519518" type="System">
+                            <param id="0" name="Object">Platform</param>
+                            <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                        <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="665636799645305" type="Platform" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="929945263104679" type="Platform">
+                            <param id="0" name="Object">PlatformFade2</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="878781594452002" type="PlatformFade2">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115546466702315">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="571038525633153" type="System">
+                            <param id="0" name="Object">RedPlatform</param>
+                            <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">-180</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="885623524705475" type="RedPlatform">
+                            <param id="0" name="Object">PlatformFadeRed</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="689092614153304" type="PlatformFadeRed">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="333433618608948">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="715694134759082" type="System">
+                            <param id="0" name="Object">RedPlatform</param>
+                            <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="420767647455094" type="RedPlatform">
+                            <param id="0" name="Object">PlatformFadeRed</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="813484784749634" type="PlatformFadeRed">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="813484295259328">
+                    <conditions>
+                        <condition behavior="Sine" id="0" name="Is active" sid="555701760532763" type="Platform" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="101514524182832" type="Platform">
+                            <param id="0" name="Object">PlatformFade</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="624510045956751" title="UI">
             <sub-events>
@@ -2377,50 +2503,11 @@
                         <action id="0" name="Set text" sid="903631470674891" type="DeathsText">
                             <param id="0" name="Text">&quot;deaths: &quot; &amp; Deaths</param>
                         </action>
+                        <action id="0" name="Set text" sid="259320394899781" type="Timer">
+                            <param id="0" name="Text">zeropad(floor(Timer/60 % 60), 2) &amp; &quot;:&quot; &amp; zeropad(floor(Timer % 60), 2)</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="666264669014260">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="227687858654233" type="System">
-                                    <param id="0" name="Value">Timer.Timer.CurrentTime(&quot;&quot;)</param>
-                                    <param id="1" name="Lower bound">0.01</param>
-                                    <param id="2" name="Upper bound">10</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="486625782378663" type="Timer">
-                                    <param id="0" name="Text">left(str(Timer.Timer.CurrentTime(&quot;&quot;)), 5)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="267738446522651">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="259015331867079" type="System">
-                                    <param id="0" name="Value">Timer.Timer.CurrentTime(&quot;&quot;)</param>
-                                    <param id="1" name="Lower bound">10</param>
-                                    <param id="2" name="Upper bound">100</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="706767504305875" type="Timer">
-                                    <param id="0" name="Text">left(str(Timer.Timer.CurrentTime(&quot;&quot;)), 6)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="921637602971517">
-                            <conditions>
-                                <condition id="-21" name="Is between values" sid="418873732064643" type="System">
-                                    <param id="0" name="Value">Timer.Timer.CurrentTime(&quot;&quot;)</param>
-                                    <param id="1" name="Lower bound">100</param>
-                                    <param id="2" name="Upper bound">999</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="499233128476759" type="Timer">
-                                    <param id="0" name="Text">left(str(Timer.Timer.CurrentTime(&quot;&quot;)), 7)</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="596477227606615">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="181872332104985" type="System">
@@ -2453,5 +2540,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="301959166953600">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="818377453274287" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="833449183705127" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

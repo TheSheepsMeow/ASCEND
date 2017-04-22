@@ -231,7 +231,10 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="176477447342465" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="200" x="0" y="0.5" />
+                        <image-point name="-200" x="1" y="0.5" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -289,6 +292,9 @@
                 <behavior-type name="Bullet" sid="457491915847572">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="Sine" sid="238591436114307">
+                    <behavior id="Sin" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839149785721197" speed="5">
@@ -313,9 +319,12 @@
                 <behavior-type name="Bullet" sid="728644732198041">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="Sine" sid="236116418687696">
+                    <behavior id="Sin" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="202281567992206" speed="5">
+                <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="227088313567102" speed="12">
                     <frame duration="1" hotspotX="1" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.148515" y="0.148515" />
@@ -467,7 +476,7 @@
                             <point x="0" y="0" />
                             <point x="0.11" y="0" />
                             <point x="0.776" y="0.45" />
-                            <point x="0.762" y="0.516667" />
+                            <point x="0.856" y="0.51" />
                             <point x="0.776" y="0.576667" />
                             <point x="0.106" y="1" />
                             <point x="0" y="1" />
@@ -491,11 +500,11 @@
         </object-type>
         <object-type name="LevelsUI" sid="812776249321660">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadow.png" />
+            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
         </object-type>
         <object-type name="DeathsText" sid="272266954318724">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadow.png" />
+            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
         </object-type>
         <object-type name="Gray" sid="841163219453463">
             <plugin id="TiledBg" />
@@ -519,7 +528,10 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201187578038311" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="200" x="0" y="0.5" />
+                        <image-point name="-200" x="1" y="0.5" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -734,8 +746,50 @@
                 <behavior-type name="Timer" sid="603991995486198">
                     <behavior id="Timer" />
                 </behavior-type>
+                <behavior-type name="Fade" sid="199632853588320">
+                    <behavior id="Fade" />
+                </behavior-type>
             </behaviors>
-            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadow.png" />
+            <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
+        </object-type>
+        <object-type name="BulletFadeLeft" sid="208198638712811">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="270908872809433">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="503178854973056" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletFadeRight" sid="616532979073074">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="513139311425013">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="401971681685402" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlatformFade2" sid="415292436660943">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="781449175687816">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="978266535170276" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
