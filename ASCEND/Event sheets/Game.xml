@@ -433,6 +433,62 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="699954907821779" type="System">
+                                    <param id="0" name="Layout">Level 3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="481547369421192">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="652049724643262" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Level 3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="936947288238399">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="565426060816342" type="Player">
+                                    <param id="0" name="Object">Goal</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="722267026708695" type="System">
+                                    <param id="0" name="Variable">Complete</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="487034527757939" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="252310603489451" type="Goal">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="285538200526085" type="Goal" />
+                                <action id="0" name="Play" sid="543213760129730" type="Audio">
+                                    <param id="0" name="Audio file">levelComplete</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="934138821582811" type="Fade">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="418893765902035" type="Fade" />
+                                <action id="-16" name="Wait" sid="138020558610471" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="739085003655624" type="System">
+                                    <param id="0" name="Variable">Level</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="343328697336775" type="System">
+                                    <param id="0" name="Variable">Complete</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="889916282526489" type="System">
                                     <param id="0" name="Layout">EndScreen</param>
                                 </action>
                             </actions>
@@ -453,7 +509,7 @@
                             <param id="1" name="Height">lerp(Self.Height, 0, 0.03)</param>
                         </action>
                         <action id="-2" name="Set Y" sid="667614877472508" type="Camera">
-                            <param id="0" name="Y">lerp(Self.Y, 88, 0.05)</param>
+                            <param id="0" name="Y">lerp(Self.Y, Goal.Y, 0.05)</param>
                         </action>
                         <action id="-3" name="Set position" sid="708532984942582" type="Player">
                             <param id="0" name="X">lerp(Self.X, Goal.X, 0.03)</param>
