@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -791,6 +792,218 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="levelTrigger7" sid="566641593006985">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="127439510828627" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="C8" sid="299817989867958">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764010017287569" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerStart8" sid="161641380910023">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="945879469464142" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="levelTrigger8" sid="467094112962859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="355017891871169" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="C9" sid="907895761058165">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="229130082227634" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerStart9" sid="891715675361454">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="518365539886940" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="levelTrigger9" sid="417179281640289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="187004754258580" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="C10" sid="544686283207851">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="203005389418455" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerStart10" sid="360945117711411">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699884100428439" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletSpin1" sid="354372302750889">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="939907193764594">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="151845013908640">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="922277890020571" speed="5">
+                    <frame duration="1" hotspotX="-5.38119" hotspotY="0.361386">
+                        <image-point name="Imagepoint 1" x="0.5" y="0" />
+                        <image-point name="Imagepoint 2" x="0.5" y="1" />
+                        <collision-poly>
+                            <point x="0.148515" y="0.148515" />
+                            <point x="0.5" y="0.00495049" />
+                            <point x="0.851485" y="0.148515" />
+                            <point x="0.995049" y="0.5" />
+                            <point x="0.851485" y="0.851485" />
+                            <point x="0.5" y="0.995049" />
+                            <point x="0.148515" y="0.851485" />
+                            <point x="0.00495049" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletSpin2" sid="689949830709009">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="768928938442496">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="442771994389166">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="984313037479249" speed="5">
+                    <frame duration="1" hotspotX="0.539604" hotspotY="5.88614">
+                        <image-point name="Imagepoint 1" x="0" y="0.5" />
+                        <image-point name="Imagepoint 2" x="1" y="0.5" />
+                        <collision-poly>
+                            <point x="0.148515" y="0.148515" />
+                            <point x="0.5" y="0.00495049" />
+                            <point x="0.851485" y="0.148515" />
+                            <point x="0.995049" y="0.5" />
+                            <point x="0.851485" y="0.851485" />
+                            <point x="0.5" y="0.995049" />
+                            <point x="0.148515" y="0.851485" />
+                            <point x="0.00495049" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletSpin3" sid="962232253617865">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="284067443154851">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="992448166228828">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="537928283025348" speed="5">
+                    <frame duration="1" hotspotX="6.12376" hotspotY="0.480198">
+                        <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        <image-point name="Imagepoint 2" x="0.5" y="0" />
+                        <collision-poly>
+                            <point x="0.148515" y="0.148515" />
+                            <point x="0.5" y="0.00495049" />
+                            <point x="0.851485" y="0.148515" />
+                            <point x="0.995049" y="0.5" />
+                            <point x="0.851485" y="0.851485" />
+                            <point x="0.5" y="0.995049" />
+                            <point x="0.148515" y="0.851485" />
+                            <point x="0.00495049" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletSpin4" sid="306209847835155">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="417661146040227">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="523526244971191">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836104747730810" speed="5">
+                    <frame duration="1" hotspotX="0.420792" hotspotY="-4.68812">
+                        <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        <image-point name="Imagepoint 2" x="0" y="0.5" />
+                        <collision-poly>
+                            <point x="0.148515" y="0.148515" />
+                            <point x="0.5" y="0.00495049" />
+                            <point x="0.851485" y="0.148515" />
+                            <point x="0.995049" y="0.5" />
+                            <point x="0.851485" y="0.851485" />
+                            <point x="0.5" y="0.995049" />
+                            <point x="0.148515" y="0.851485" />
+                            <point x="0.00495049" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletFadeSpin" sid="258258412086989">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="341774566625287">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="910834361877504" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.173077" y="0.173077" />
+                            <point x="0.5" y="0.0576923" />
+                            <point x="0.807692" y="0.192308" />
+                            <point x="0.942308" y="0.5" />
+                            <point x="0.807692" y="0.807692" />
+                            <point x="0.5" y="0.942308" />
+                            <point x="0.173077" y="0.826923" />
+                            <point x="0.0384615" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Swipe" plugin-id="Sprite" sid="595542049986699">
@@ -813,10 +1026,27 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Spinners" plugin-id="Sprite" sid="111767333811704">
+            <members>
+                <member>BulletSpin1</member>
+                <member>BulletSpin2</member>
+                <member>BulletSpin3</member>
+                <member>BulletSpin4</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="PinToPlatform" sid="217410850482447" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="899400107690623">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
+        <layout>Level 3.xml</layout>
         <layout>EndScreen.xml</layout>
         <layout>Title.xml</layout>
     </layout-folder>
