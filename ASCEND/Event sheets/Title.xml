@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Title</name>
+    <events>
+        <include>LocalStorage</include>
+        <variable constant="0" name="isMuted" sid="224088413067481" static="0" type="number">0</variable>
+        <event-group description="" sid="869288981276382" title="Version">
+            <sub-events>
+                <event-block sid="834342003045390">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="858921301822921" type="textDebug">
+                            <param id="0" name="Text">&quot;Version: &quot; &amp; projectversion</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="178354193450304" title="Mute">
+            <sub-events>
+                <event-block sid="455735825365482">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="909916442885464" type="Touch">
+                            <param id="0" name="Object">muteButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="540947774632612" type="System">
+                            <param id="0" name="Variable">isMuted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="400308715044339" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="814084270345501">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="471728824407133" type="System">
+                            <param id="0" name="Variable">isMuted</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="746234007591557" type="System">
+                            <param id="0" name="Variable">isMuted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="292407839973990">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="871182984891475" type="System">
+                            <param id="0" name="Variable">isMuted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="173053464667139" type="muteButton">
+                            <param id="0" name="Animation">&quot;muted&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="733119805795239" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="133984444157029">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="911014277708478" type="System">
+                            <param id="0" name="Variable">isMuted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="120953220121325" type="muteButton">
+                            <param id="0" name="Animation">&quot;unmuted&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="222503993724440" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="777203800073491" title="Play Button">
+            <sub-events>
+                <event-block sid="841633514746353">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="406539648793672">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="986373110513284" type="Touch">
+                            <param id="0" name="Object">menuButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="820287540320360" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533636099001138">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="721927972795111" type="Touch">
+                            <param id="0" name="Object">menuButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="107296089135543" type="menuButton">
+                            <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="356420328616975" type="System">
+                            <param id="0" name="Layout">Level 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="670042667986549">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="835834238435577" type="Touch">
+                            <param id="0" name="Object">menuButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="785408494489810" type="menuButton">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="301127279038993">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="899386047589273" title="High Score / Reset">
+            <sub-events>
+                <event-block sid="978204938999341">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="153202250977626">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="773050644545026" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="585914533971444" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="754942692181215">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="787006984601884" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="164101770460519" type="textScore">
+                            <param id="0" name="Text">&quot;best time: &quot; &amp; highScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="952976454176757">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="448889858294829" type="Touch">
+                            <param id="0" name="Object">menuButtonReset</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="432934441420171" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="795229620033518" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="734438316159912" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="715711972475229" type="textResetScores">
+                            <param id="0" name="Text">&quot;confirm?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="849450415235955">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Is playing" sid="303983167277375" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="789082896500058" type="textResetScores">
+                            <param id="0" name="Text">&quot;reset time&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="704996969488905">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="665550519574130" type="Touch">
+                            <param id="0" name="Object">menuButtonReset</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="693423196749419" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Clear storage" sid="628050700778161" type="LocalStorage" />
+                        <action id="-9" name="Set value" sid="705011798057585" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="486211067489209" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="349810261750791" type="Function">
+                            <param id="0" name="Name">&quot;setHighScore&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="491594434814651" type="System">
+                            <param id="0" name="Seconds">0.15</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="443748637879912" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="957374883931942">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="123169975111264" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="283815967418308" type="Touch">
+                            <param id="0" name="Object">menuButtonReset</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="210807321212400" type="menuButtonReset">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="409465470908562" title="More Games">
+            <sub-events>
+                <event-block sid="775041533932059">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="637807468232385" type="Touch">
+                            <param id="0" name="Object">ad</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Go to URL" sid="579155238969055" type="Browser">
+                            <param id="0" name="URL">&quot;http://www.thesheepsmeow.com/html5&quot;</param>
+                            <param id="1" name="Target">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

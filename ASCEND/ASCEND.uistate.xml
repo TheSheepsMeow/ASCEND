@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Level 1</layout>
+        <layout order="1">Level 2</layout>
         <layout order="3">EndScreen</layout>
-        <layout active="1" order="1">Level 2</layout>
+        <layout active="1" order="5">Title</layout>
         <event-sheet order="2">Game</event-sheet>
         <event-sheet order="4">End</event-sheet>
     </open-tabs>
@@ -22,7 +23,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="0" name="Swipe" />
+        <family expanded="0" name="Spinners" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
@@ -58,5 +62,41 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/C4/" />
         <folder expanded="1" path="animation-folder/Ground/" />
         <folder expanded="1" path="animation-folder/RedScreen/" />
+        <folder expanded="1" path="animation-folder/C5/" />
+        <folder expanded="1" path="animation-folder/levelTrigger4/" />
+        <folder expanded="1" path="animation-folder/PlayerStart5/" />
+        <folder expanded="1" path="animation-folder/levelTrigger5/" />
+        <folder expanded="1" path="animation-folder/levelTrigger6/" />
+        <folder expanded="1" path="animation-folder/C6/" />
+        <folder expanded="1" path="animation-folder/C7/" />
+        <folder expanded="1" path="animation-folder/PlayerStart6/" />
+        <folder expanded="1" path="animation-folder/PlayerStart7/" />
+        <folder expanded="1" path="animation-folder/PlatformFade/" />
+        <folder expanded="1" path="animation-folder/PlatformFadeRed/" />
+        <folder expanded="1" path="animation-folder/tappingGesture/" />
+        <folder expanded="1" path="animation-folder/swipeArrow/" />
+        <folder expanded="1" path="animation-folder/swipeTrigger/" />
+        <folder expanded="1" path="animation-folder/swipeTrigger2/" />
+        <folder expanded="1" path="animation-folder/BulletFadeLeft/" />
+        <folder expanded="1" path="animation-folder/BulletFadeRight/" />
+        <folder expanded="1" path="animation-folder/PlatformFade2/" />
+        <folder expanded="1" path="animation-folder/levelTrigger7/" />
+        <folder expanded="1" path="animation-folder/C8/" />
+        <folder expanded="1" path="animation-folder/PlayerStart8/" />
+        <folder expanded="1" path="animation-folder/levelTrigger8/" />
+        <folder expanded="1" path="animation-folder/C9/" />
+        <folder expanded="1" path="animation-folder/PlayerStart9/" />
+        <folder expanded="1" path="animation-folder/levelTrigger9/" />
+        <folder expanded="1" path="animation-folder/C10/" />
+        <folder expanded="1" path="animation-folder/PlayerStart10/" />
+        <folder expanded="1" path="animation-folder/BulletSpin1/" />
+        <folder expanded="1" path="animation-folder/BulletSpin2/" />
+        <folder expanded="1" path="animation-folder/BulletSpin3/" />
+        <folder expanded="1" path="animation-folder/BulletSpin4/" />
+        <folder expanded="1" path="animation-folder/BulletFadeSpin/" />
+        <folder expanded="1" path="animation-folder/menuButton/" />
+        <folder expanded="1" path="animation-folder/menuButtonReset/" />
+        <folder expanded="1" path="animation-folder/thesheepsmeow/" />
+        <folder expanded="1" path="animation-folder/muteButton/" />
     </folders-expanded>
 </c2uistate>

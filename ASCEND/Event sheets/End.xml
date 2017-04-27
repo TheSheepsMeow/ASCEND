@@ -22,7 +22,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="209454426858401" type="System">
-                    <param id="0" name="Layout">Level 1</param>
+                    <param id="0" name="Layout">Title</param>
                 </action>
                 <action id="-21" name="Reset global variables" sid="630447246410312" type="System" />
             </actions>

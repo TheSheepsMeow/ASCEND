@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game</name>
     <events>
+        <include>LocalStorage</include>
         <variable constant="0" name="TextGoBack" sid="673226776830744" static="0" type="number">0</variable>
         <variable constant="0" name="ShowTime" sid="991453449417589" static="0" type="number">0</variable>
         <variable constant="0" name="Minutes" sid="383302810120249" static="0" type="number">0</variable>
@@ -12,6 +13,8 @@
         <variable constant="0" name="Complete" sid="961590963776932" static="0" type="number">0</variable>
         <variable constant="0" name="Deaths" sid="969086329838465" static="0" type="number">0</variable>
         <variable constant="0" name="Level" sid="152312734909185" static="0" type="number">1</variable>
+        <variable constant="0" name="highScore" sid="216809718436775" static="0" type="number">42</variable>
+        <variable constant="0" name="score" sid="517291536160374" static="0" type="number">0</variable>
         <event-block sid="325549227989158">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="362111462711041" type="System" />

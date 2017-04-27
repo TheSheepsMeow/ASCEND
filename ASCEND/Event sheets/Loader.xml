@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loader</name>
+    <events>
+        <event-group description="" sid="898115203133444" title="Loader">
+            <sub-events>
+                <event-block sid="302015286849544">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="843809609846702">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="391537944579090" type="System">
+                            <param id="0" name="First value">loadingprogress</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0.99</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="175121502480309" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="838149824907223" type="System">
+                            <param id="0" name="Layout">Title</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="375432582301534">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="486044914311938" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="691980312821926" type="loaderProgress">
+                            <param id="0" name="Width">lerp(loaderProgress.Width, 250 * loadingprogress, 0.05)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="887550182004132" type="textDebug">
+                            <param id="0" name="Text">loadingprogress</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

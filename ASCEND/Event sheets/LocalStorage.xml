@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LocalStorage</name>
+    <events>
+        <event-group description="" sid="752009417797046" title="LocalStorage">
+            <sub-events>
+                <event-block sid="795735902606216">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="371894010690108" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="972899538362729" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="231957826533222">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="698162075169196" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="567262509987224" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="750543857571765">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="670778839464416" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="183668838467099" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="991200890070287">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="571786023515316" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="102565271988033" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">42</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Replace this.</comment>
+                <event-block disabled="1" sid="257434757015149">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="305978084606742" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">highScore</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="912400106832468" type="Function">
+                            <param id="0" name="Name">&quot;setHighScore&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="842772448240963">
+                    <conditions>
+                        <condition id="0" name="On function" sid="571033197085151" type="Function">
+                            <param id="0" name="Name">&quot;setHighScore&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="413170574103595" type="System">
+                            <param id="0" name="Variable">highScore</param>
+                            <param id="1" name="Value">score</param>
+                        </action>
+                        <action id="0" name="Set item" sid="748209954874459" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highScore_key&quot;</param>
+                            <param id="1" name="Value">highScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
