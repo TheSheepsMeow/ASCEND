@@ -1008,20 +1008,39 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="titleBG" sid="752890104945615">
-            <plugin id="NinePatch" />
-            <texture />
-        </object-type>
         <object-type name="menuButton" sid="822356945027358">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="347424930863095" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\play0.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\play1.png" />
+                    <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Play_01.png">
+                        <collision-poly>
+                            <point x="0.00917431" y="0.00980392" />
+                            <point x="0.990826" y="0.00980392" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Play_02.png">
+                        <collision-poly>
+                            <point x="0.00917431" y="0.00980392" />
+                            <point x="0.990826" y="0.00980392" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="226046646817161" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\pressed.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\plressed1.png" />
+                <animation framecount="1" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="226046646817161" speed="10">
+                    <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Play_Clicked.png">
+                        <collision-poly>
+                            <point x="0.275229" y="0.294118" />
+                            <point x="0.495413" y="0.235294" />
+                            <point x="0.669725" y="0.352941" />
+                            <point x="0.862385" y="0.5" />
+                            <point x="0.669725" y="0.647059" />
+                            <point x="0.495413" y="0.754902" />
+                            <point x="0.275229" y="0.705882" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1031,7 +1050,7 @@
         </object-type>
         <object-type name="ad" sid="441138094037833">
             <plugin id="NinePatch" />
-            <texture />
+            <texture original-source="C:\MEOW\ASCEND\Title\MoreGames.png" />
         </object-type>
         <object-type name="textTitle2" sid="822147733638018">
             <plugin id="Spritefont2" />
@@ -1045,12 +1064,50 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460162442724064" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\reset.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\reset1.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\ResetScores_01.png">
+                        <collision-poly>
+                            <point x="0.011236" y="0.016129" />
+                            <point x="0.988764" y="0.016129" />
+                            <point x="1" y="1" />
+                            <point x="0.011236" y="0.983871" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\ResetScores_Clicked.png">
+                        <collision-poly>
+                            <point x="0.168539" y="0.241935" />
+                            <point x="0.494382" y="0.177419" />
+                            <point x="0.797753" y="0.290323" />
+                            <point x="0.876405" y="0.822581" />
+                            <point x="0.494382" y="0.419355" />
+                            <point x="0.134831" y="0.806452" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="993827016011967" speed="10">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\confirm.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\confirm1.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Confirm_01.png">
+                        <collision-poly>
+                            <point x="0.325843" y="0.467742" />
+                            <point x="0.494382" y="0.435484" />
+                            <point x="0.640449" y="0.516129" />
+                            <point x="0.932584" y="0.5" />
+                            <point x="0.741573" y="0.629032" />
+                            <point x="0.494382" y="0.548387" />
+                            <point x="0.247191" y="0.645161" />
+                            <point x="0.0674157" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Confirm_Clicked.png">
+                        <collision-poly>
+                            <point x="0.325843" y="0.467742" />
+                            <point x="0.494382" y="0.435484" />
+                            <point x="0.640449" y="0.516129" />
+                            <point x="0.932584" y="0.5" />
+                            <point x="0.741573" y="0.629032" />
+                            <point x="0.494382" y="0.548387" />
+                            <point x="0.247191" y="0.645161" />
+                            <point x="0.0674157" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1071,10 +1128,28 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="unmuted" pingpong="0" repeatcount="1" repeatto="0" sid="405441801959169" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\mute.png" />
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Mute_01.png">
+                        <collision-poly>
+                            <point x="0.313433" y="0.318182" />
+                            <point x="0.492537" y="0.19697" />
+                            <point x="0.61194" y="0.393939" />
+                            <point x="0.835821" y="0.5" />
+                            <point x="0.61194" y="0.606061" />
+                            <point x="0.492537" y="0.80303" />
+                            <point x="0.328358" y="0.666667" />
+                            <point x="0.104478" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="muted" pingpong="0" repeatcount="1" repeatto="0" sid="578345481121122" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\mute1.png" />
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Mute_Clicked.png">
+                        <collision-poly>
+                            <point x="0.0149254" y="0.0151515" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.0149254" y="0.984848" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1099,6 +1174,23 @@
         <object-type name="loaderProgress" sid="928681384944599">
             <plugin id="NinePatch" />
             <texture />
+        </object-type>
+        <object-type name="AscendTitle" sid="671352903858488">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="598853670973285" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\AscendTitle.png">
+                        <collision-poly>
+                            <point x="0.521875" y="0.347917" />
+                            <point x="0.5" y="0.366667" />
+                            <point x="0.475" y="0.35" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85625" y="0.904167" />
+                            <point x="0.240625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
