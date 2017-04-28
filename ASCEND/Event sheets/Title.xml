@@ -165,7 +165,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="164101770460519" type="textScore">
-                            <param id="0" name="Text">&quot;best time: &quot; &amp; highScore</param>
+                            <param id="0" name="Text">&quot;best: &quot; &amp; bestWorld &amp; &quot;-&quot; &amp; bestLevel</param>
                         </action>
                     </actions>
                 </event-block>
@@ -214,16 +214,20 @@
                     </conditions>
                     <actions>
                         <action id="3" name="Clear storage" sid="628050700778161" type="LocalStorage" />
-                        <action id="-9" name="Set value" sid="705011798057585" type="System">
-                            <param id="0" name="Variable">score</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-9" name="Set value" sid="486211067489209" type="System">
-                            <param id="0" name="Variable">highScore</param>
+                            <param id="0" name="Variable">bestWorld</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="705011798057585" type="System">
+                            <param id="0" name="Variable">bestLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="497136130819756" type="Function">
+                            <param id="0" name="Name">&quot;setBestWorld&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                         <action id="0" name="Call function" sid="349810261750791" type="Function">
-                            <param id="0" name="Name">&quot;setHighScore&quot;</param>
+                            <param id="0" name="Name">&quot;setBestLevel&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-16" name="Wait" sid="491594434814651" type="System">
