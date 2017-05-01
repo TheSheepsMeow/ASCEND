@@ -70,7 +70,7 @@
                 </instance>
                 <instance type="ShadowLight" uid="6">
                     <properties>
-                        <light-height>500</light-height>
+                        <light-height>0</light-height>
                         <light-radius>0</light-radius>
                         <cast-from>Same tag</cast-from>
                         <tag>1</tag>
@@ -2329,7 +2329,7 @@
                         <y>8</y>
                         <z>0</z>
                         <width>63.120269775</width>
-                        <height>79.795532227</height>
+                        <height>110.067848206</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
