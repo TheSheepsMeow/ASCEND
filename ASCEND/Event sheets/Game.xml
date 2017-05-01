@@ -81,157 +81,201 @@
         </event-block>
         <event-group description="" sid="227252174395332" title="Player/Animations">
             <sub-events>
+                <comment></comment>
                 <event-block sid="852025938189664">
                     <conditions>
-                        <condition id="14" name="On tap" sid="828707225207804" type="Touch" />
-                        <condition id="-3" name="Is on-screen" sid="397167092936963" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="529609950427097" type="Player">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="243631086527702">
-                    <conditions>
-                        <condition id="1" name="On any touch end" sid="898216820884204" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="675362847940658" type="System">
-                            <param id="0" name="Variable">IsSwiping</param>
+                        <condition id="4" inverted="1" name="Is touching object" sid="106970897197175" type="Touch">
+                            <param id="0" name="Object">menuButtonHome</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="144670443604518" type="System">
+                            <param id="0" name="First value">timescale</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="417520007601497" type="Player">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="290697814644661">
-                    <conditions>
-                        <condition id="2" name="Is in touch" sid="957633959679404" type="Touch" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="860557931748647" type="Player">
-                            <param id="0" name="Animation">&quot;Anticipate&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="407208410634866">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Is in touch" sid="850860574339606" type="Touch" />
-                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="485974946628759" type="Player" />
-                        <condition id="2" inverted="1" name="Is playing" sid="852399106522904" type="Player">
-                            <param id="0" name="Animation">&quot;Death&quot;</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="540627242124931" type="Player">
-                            <param id="0" name="Animation">&quot;Land&quot;</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="534037706183307" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="182529820239692" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="357377245167971">
-                    <conditions>
-                        <condition id="7" name="Compare touch speed" sid="766523291839358" type="Touch">
-                            <param id="0" name="Touch index">0</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Speed">1000</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="228820629723194" type="System">
-                            <param id="0" name="Variable">IsSwiping</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Second value">1</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="199274348209755">
+                        <event-block sid="200777367598524">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <event-block sid="757649153843348">
                             <conditions>
-                                <condition id="-21" name="Is between values" sid="456954654912632" type="System">
-                                    <param id="0" name="Value">Touch.AngleAt(0)</param>
-                                    <param id="1" name="Lower bound">65</param>
-                                    <param id="2" name="Upper bound">115</param>
+                                <condition id="14" name="On tap" sid="236234759080226" type="Touch" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="688569119324441" type="Touch">
+                                    <param id="0" name="Object">menuButtonHome</param>
+                                </condition>
+                                <condition id="-3" name="Is on-screen" sid="964931009702795" type="Player" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="683052098857903" type="Touch">
+                                    <param id="0" name="Object">menuButtonHome</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="182633613722838" type="System">
-                                    <param id="0" name="Variable">IsSwiping</param>
-                                    <param id="1" name="Value">1</param>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="940737627688465" type="Player">
+                                    <param id="0" name="Control">2</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="240937938146347" type="System">
-                                    <param id="0" name="Seconds">0.2</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="131933684067199" type="System">
+                            </actions>
+                            <sub-events>
+                                <event-block sid="334518114195313">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="310522178207424">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="884493668117269" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="822764061787045" type="System">
                                     <param id="0" name="Variable">IsSwiping</param>
-                                    <param id="1" name="Value">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="553893682194234" type="Touch">
+                                    <param id="0" name="Object">menuButtonHome</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="360652694844099" type="Player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="247445217500983">
+                            <conditions>
+                                <condition id="2" name="Is in touch" sid="497109800175588" type="Touch" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="502131439772661" type="Touch">
+                                    <param id="0" name="Object">menuButtonHome</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="521340745960475" type="Player">
+                                    <param id="0" name="Animation">&quot;Anticipate&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="775896667327803">
+                            <conditions>
+                                <condition id="2" inverted="1" name="Is in touch" sid="999276879728487" type="Touch" />
+                                <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="556030497515984" type="Player" />
+                                <condition id="2" inverted="1" name="Is playing" sid="636331340605024" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="491258991830005" type="Player">
+                                    <param id="0" name="Animation">&quot;Land&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="563539131653624" type="System" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="157334121797317" type="Touch">
+                                    <param id="0" name="Object">menuButtonHome</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="801677484571019" type="Player">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="691637315379870">
+                            <conditions>
+                                <condition id="7" name="Compare touch speed" sid="761253928396088" type="Touch">
+                                    <param id="0" name="Touch index">0</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Speed">1000</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="418042868953533" type="System">
+                                    <param id="0" name="Variable">IsSwiping</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="697115203410454">
+                                    <conditions>
+                                        <condition id="-21" name="Is between values" sid="195414375898772" type="System">
+                                            <param id="0" name="Value">Touch.AngleAt(0)</param>
+                                            <param id="1" name="Lower bound">65</param>
+                                            <param id="2" name="Upper bound">115</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="351360793162082" type="System">
+                                            <param id="0" name="Variable">IsSwiping</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="229910467292398" type="System">
+                                            <param id="0" name="Seconds">0.2</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="675399937103516" type="System">
+                                            <param id="0" name="Variable">IsSwiping</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="956916355618987">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="672075925251206" type="System">
+                                    <param id="0" name="Variable">IsSwiping</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="945120006181122" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="361241469936821" type="Player" />
+                            </actions>
+                        </event-block>
+                        <comment></comment>
+                        <event-block sid="500612255294202">
+                            <conditions>
+                                <condition behavior="Platform" id="5" name="On jump" sid="157393416997305" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="941281158025931" type="Audio">
+                                    <param id="0" name="Audio file">Jump 20</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="453104971807855" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="466928919599393">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="564683634987961" type="Player" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="787174174948859" type="Player">
+                                    <param id="0" name="Animation">&quot;Land&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="ShadowCaster" id="0" name="Set enabled" sid="300897537961827" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="273049795690062">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="502866913405066" type="Player">
+                                    <param id="0" name="Animation">&quot;Land&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="204440719466129" type="Player">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="423870203082606">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="550106217290150" type="System">
-                            <param id="0" name="Variable">IsSwiping</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="553327391207938" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="12" name="Fall through" sid="762853739262722" type="Player" />
-                    </actions>
-                </event-block>
-                <event-block sid="449668962130765">
-                    <conditions>
-                        <condition behavior="Platform" id="5" name="On jump" sid="157475005945202" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="670113452467978" type="Audio">
-                            <param id="0" name="Audio file">Jump 20</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="359410051932935" type="Player">
-                            <param id="0" name="Animation">&quot;Jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="663671099971368">
-                    <conditions>
-                        <condition behavior="Platform" id="9" name="On landed" sid="706732995980453" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="289988846330441" type="Player">
-                            <param id="0" name="Animation">&quot;Land&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="ShadowCaster" id="0" name="Set enabled" sid="653241327178976" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="374329431543935">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="736094561670151" type="Player">
-                            <param id="0" name="Animation">&quot;Land&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="542279287589913" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -3113,267 +3157,317 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="990715457237831">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="835470984759138" type="System">
-                    <param id="0" name="Interval (seconds)">0.01</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="248595014137321" type="BulletLeft">
-                    <param id="0" name="Object">BulletFadeLeft</param>
-                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-29" name="Move to object" sid="469794637803922" type="BulletFadeLeft">
-                    <param id="0" name="Where">1</param>
-                    <param id="1" name="Object">BulletLeft</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="301187905254861" type="BulletRight">
-                    <param id="0" name="Object">BulletFadeRight</param>
-                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-8" name="Set angle" sid="768486094987955" type="BulletFadeRight">
-                    <param id="0" name="Angle">180</param>
-                </action>
-                <action id="-29" name="Move to object" sid="862218028348041" type="BulletFadeRight">
-                    <param id="0" name="Where">1</param>
-                    <param id="1" name="Object">BulletRight</param>
-                </action>
-            </actions>
+        <event-group description="" sid="351767740456555" title="Spinners">
             <sub-events>
-                <event-block sid="584262781856933">
+                <event-block sid="993193780474657">
                     <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="798967351464650" type="System">
-                            <param id="0" name="Object">Platform</param>
-                            <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">-180</param>
-                        </condition>
-                        <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="435800885136845" type="Platform" />
+                        <condition id="-2" name="On start of layout" sid="126274227557685" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="737056493172259" type="Platform">
-                            <param id="0" name="Object">PlatformFade2</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="565776863192910" type="PlatformFade2">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="559835193585210">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="906565286498805" type="System">
+                                    <param id="0" name="Object">Spinners</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="467277924356428" type="Spinners">
+                                    <param id="0" name="Instance variable">PinToPlatform</param>
+                                </condition>
+                                <condition id="-15" name="Pick nearest/furthest" sid="450377853376402" type="Platform">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">Spinners.X</param>
+                                    <param id="2" name="Y">Spinners.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="653250072917897" type="Spinners">
+                                    <param id="0" name="Pin to">Platform</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="326620356113493">
+                <event-block sid="799713066334828">
                     <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="221167325519518" type="System">
-                            <param id="0" name="Object">Platform</param>
-                            <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                        <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="665636799645305" type="Platform" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="929945263104679" type="Platform">
-                            <param id="0" name="Object">PlatformFade2</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="878781594452002" type="PlatformFade2">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="115546466702315">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="571038525633153" type="System">
-                            <param id="0" name="Object">RedPlatform</param>
-                            <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">-180</param>
+                        <condition id="-6" name="Every X seconds" sid="815589419086357" type="System">
+                            <param id="0" name="Interval (seconds)">0.01</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="885623524705475" type="RedPlatform">
-                            <param id="0" name="Object">PlatformFadeRed</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="689092614153304" type="PlatformFadeRed">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="333433618608948">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="715694134759082" type="System">
-                            <param id="0" name="Object">RedPlatform</param>
-                            <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="420767647455094" type="RedPlatform">
-                            <param id="0" name="Object">PlatformFadeRed</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="813484784749634" type="PlatformFadeRed">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="307979594226008">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="182116565089665" type="System">
-                            <param id="0" name="Object">BulletSpin1</param>
-                            <param id="1" name="Expression">BulletSpin1.Rotate.Speed</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="985372883111727" type="BulletSpin1">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="288713612581369">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="782868086445703" type="System">
-                            <param id="0" name="Object">BulletSpin1</param>
-                            <param id="1" name="Expression">BulletSpin1.Rotate.Speed</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="246416559060211" type="BulletSpin1">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="785859350948953">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="312565685894276" type="System">
-                            <param id="0" name="Object">BulletSpin2</param>
-                            <param id="1" name="Expression">BulletSpin2.Rotate.Speed</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="877738020125726" type="BulletSpin2">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="253975334549738">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="917395484215367" type="System">
-                            <param id="0" name="Object">BulletSpin2</param>
-                            <param id="1" name="Expression">BulletSpin2.Rotate.Speed</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="393032422132099" type="BulletSpin2">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="380016284382968">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="301099851693702" type="System">
-                            <param id="0" name="Object">BulletSpin3</param>
-                            <param id="1" name="Expression">BulletSpin3.Rotate.Speed</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="500614841927829" type="BulletSpin3">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="735233621623491">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="319715957272797" type="System">
-                            <param id="0" name="Object">BulletSpin3</param>
-                            <param id="1" name="Expression">BulletSpin3.Rotate.Speed</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="841234857215652" type="BulletSpin3">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="835538542409575">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="714474502061465" type="System">
-                            <param id="0" name="Object">BulletSpin4</param>
-                            <param id="1" name="Expression">BulletSpin4.Rotate.Speed</param>
-                            <param id="2" name="Comparison">4</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="536334609882735" type="BulletSpin4">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="274648610783539">
-                    <conditions>
-                        <condition id="-33" name="Pick by comparison" sid="455225697282026" type="System">
-                            <param id="0" name="Object">BulletSpin4</param>
-                            <param id="1" name="Expression">BulletSpin4.Rotate.Speed</param>
-                            <param id="2" name="Comparison">2</param>
-                            <param id="3" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="863923050482036" type="BulletSpin4">
-                            <param id="0" name="Object">BulletFadeSpin</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="813484295259328">
-                    <conditions>
-                        <condition behavior="Sine" id="0" name="Is active" sid="555701760532763" type="Platform" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="101514524182832" type="Platform">
-                            <param id="0" name="Object">PlatformFade</param>
+                        <action id="0" name="Spawn another object" sid="230837222612143" type="BulletLeft">
+                            <param id="0" name="Object">BulletFadeLeft</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="-29" name="Move to object" sid="736696233862355" type="BulletFadeLeft">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">BulletLeft</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="482840560386620" type="BulletRight">
+                            <param id="0" name="Object">BulletFadeRight</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="305602433284289" type="BulletFadeRight">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="435703405494957" type="BulletFadeRight">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">BulletRight</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="413193340917565">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="374592119514169" type="System">
+                                    <param id="0" name="Object">Platform</param>
+                                    <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">-180</param>
+                                </condition>
+                                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="929424227528066" type="Platform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="589956989040112" type="Platform">
+                                    <param id="0" name="Object">PlatformFade2</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="746171096190651" type="PlatformFade2">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="816333983228878">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="240973594644667" type="System">
+                                    <param id="0" name="Object">Platform</param>
+                                    <param id="1" name="Expression">Platform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                                <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="503593765724447" type="Platform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="760358066642270" type="Platform">
+                                    <param id="0" name="Object">PlatformFade2</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="479857408521270" type="PlatformFade2">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="642249134523156">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="846150554177005" type="System">
+                                    <param id="0" name="Object">RedPlatform</param>
+                                    <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">-180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="404140083110322" type="RedPlatform">
+                                    <param id="0" name="Object">PlatformFadeRed</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="969797567017104" type="PlatformFadeRed">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="844617308308114">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="222788831660199" type="System">
+                                    <param id="0" name="Object">RedPlatform</param>
+                                    <param id="1" name="Expression">RedPlatform.Bullet.AngleOfMotion</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="790038939090331" type="RedPlatform">
+                                    <param id="0" name="Object">PlatformFadeRed</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="878210988404575" type="PlatformFadeRed">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="324223653872495">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="783444604568564" type="System">
+                                    <param id="0" name="Object">BulletSpin1</param>
+                                    <param id="1" name="Expression">BulletSpin1.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="316539415261465" type="BulletSpin1">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="338740350536640">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="724147090190384" type="System">
+                                    <param id="0" name="Object">BulletSpin1</param>
+                                    <param id="1" name="Expression">BulletSpin1.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="635636290349624" type="BulletSpin1">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="702649185825197">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="678325428057272" type="System">
+                                    <param id="0" name="Object">BulletSpin2</param>
+                                    <param id="1" name="Expression">BulletSpin2.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="844161280298444" type="BulletSpin2">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="846152844191430">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="796849515597044" type="System">
+                                    <param id="0" name="Object">BulletSpin2</param>
+                                    <param id="1" name="Expression">BulletSpin2.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="763175121582601" type="BulletSpin2">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="342087355352575">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="990203701348607" type="System">
+                                    <param id="0" name="Object">BulletSpin3</param>
+                                    <param id="1" name="Expression">BulletSpin3.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="103150366774231" type="BulletSpin3">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="133720147505344">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="980704403353770" type="System">
+                                    <param id="0" name="Object">BulletSpin3</param>
+                                    <param id="1" name="Expression">BulletSpin3.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="508279533887786" type="BulletSpin3">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="614394550415752">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="356054035164517" type="System">
+                                    <param id="0" name="Object">BulletSpin4</param>
+                                    <param id="1" name="Expression">BulletSpin4.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="128708535105587" type="BulletSpin4">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="184066329736963">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="253963350033799" type="System">
+                                    <param id="0" name="Object">BulletSpin4</param>
+                                    <param id="1" name="Expression">BulletSpin4.Rotate.Speed</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="365698657791568" type="BulletSpin4">
+                                    <param id="0" name="Object">BulletFadeSpin</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="600444019360447">
+                            <conditions>
+                                <condition behavior="Sine" id="0" name="Is active" sid="662591898276119" type="Platform" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="481698868399595" type="Platform">
+                                    <param id="0" name="Object">PlatformFade</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="824265272465582">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
+        </event-group>
+        <event-block sid="429547414572549">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="448014249150257" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="184159325944343" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
         </event-block>
         <event-group description="" sid="624510045956751" title="UI">
             <sub-events>
@@ -3498,47 +3592,354 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="301959166953600">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="818377453274287" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="833449183705127" type="System">
-                    <param id="0" name="Variable">Timer</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="221936455120859">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="865715339733253" type="System" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="196246337945157" title="Pause Button">
             <sub-events>
-                <event-block sid="794307926160129">
+                <event-block sid="415661546943626">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="865570998143265">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="173608619010569" type="System">
-                            <param id="0" name="Object">Spinners</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="983468134723389" type="Spinners">
-                            <param id="0" name="Instance variable">PinToPlatform</param>
-                        </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="988549835535062" type="Platform">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="X">Spinners.X</param>
-                            <param id="2" name="Y">Spinners.Y</param>
+                        <condition id="4" name="Is touching object" sid="306634062686256" type="Touch">
+                            <param id="0" name="Object">menuButtonHome</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="274316295681600" type="Spinners">
-                            <param id="0" name="Pin to">Platform</param>
-                            <param id="1" name="Mode">1</param>
+                        <action id="4" name="Set animation" sid="381600169537748" type="menuButtonHome">
+                            <param id="0" name="Animation">&quot;Pressed&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="207783736091350">
+                    <conditions>
+                        <condition id="4" inverted="1" name="Is touching object" sid="652410304278277" type="Touch">
+                            <param id="0" name="Object">menuButtonHome</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="512175441046769" type="menuButtonHome">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="456473170445795">
+                    <conditions>
+                        <condition id="-9" name="Layer is visible" sid="805007177019036" type="System">
+                            <param id="0" name="Layer">&quot;Menu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="272420605603717" type="menuButtonHome">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="904985709423902">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="374470982650458" type="Touch">
+                            <param id="0" name="Object">menuButtonHome</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="504612632757830" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="195618688351581" type="menuButtonHome" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="764286827732740" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="362310354286363" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="786153850604195">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="549264731007719" type="Touch">
+                            <param id="0" name="Object">menuButtonHome</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="825914754991590" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="232365521815829" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124221431551976">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <comment>Pause Menu</comment>
+                <event-block sid="509310930634762">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="850336960965595" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="906360089206325" type="System">
+                            <param id="0" name="Layer">&quot;Menu&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="620039205229445" type="System">
+                            <param id="0" name="Object">Home_</param>
+                            <param id="1" name="Time scale">1.0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Home</comment>
+                        <event-block sid="621112371861104">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="506707993409915" type="Touch">
+                                    <param id="0" name="Object">Home_</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="907463434646361" type="Home_" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="298853578171506" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="431223162828335" type="Home_">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="454057921897690" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="500692186643143" type="System">
+                                    <param id="0" name="Layer">&quot;Menu&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="220798080797052" type="System">
+                                    <param id="0" name="Layout">Title</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="745604869729366">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="268511341341348" type="Touch">
+                                    <param id="0" name="Object">Retry_</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="325234849240223" type="Retry_" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="719797010759676" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="929187904359120" type="System" />
+                            </actions>
+                        </event-block>
+                        <comment>Unpause</comment>
+                        <event-block sid="876015144898940">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="368821079066680" type="Touch">
+                                    <param id="0" name="Object">pauseBG</param>
+                                </condition>
+                                <condition id="-9" name="Is visible" sid="598582173309764" type="pauseBG" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="391125478782704" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="555973250822030" type="System">
+                                    <param id="0" name="Layer">&quot;Menu&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="630486934471323" type="menuButtonHome">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="302698704572363">
+                    <conditions />
+                    <actions />
+                </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="489689231000412" title="Music">
+            <sub-events>
+                <event-block sid="713550039076495">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="363451413138360">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="916953457239672" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="633270461632192" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="652783837431599" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="859204401961292" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="965859541578711" type="Audio">
+                            <param id="0" name="Audio file">1_Ascend music (before shots being introduced)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="501683281022199">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="784657093875229" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="154016933796445" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="124984880709422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="623006610311387" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="958428759939585" type="Audio">
+                            <param id="0" name="Audio file">2_Ascend music (when shots are introduced)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="887541888812807">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="659317637494804" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="892965771607759" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="180298571248581" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="596833631807461" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="817201729013577" type="Audio">
+                            <param id="0" name="Audio file">3_Ascend music (with Hi Hat)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="519021227853659">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="441273763354459" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="852979210108767" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="257750653640479" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="880985772931793" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="461716351148768" type="Audio">
+                            <param id="0" name="Audio file">4_Ascend music (with almost all instruments)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="935210706278133">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="661911670455218" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="614899047170745" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="300997069763936" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="912519042032613" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="819330877146047" type="Audio">
+                            <param id="0" name="Audio file">5_Ascend music (complete)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="292858607937923">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="863453943517275" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="794532744461259" type="System">
+                            <param id="0" name="Variable">Level</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="628530416002483" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="643225497671985" type="Audio">
+                            <param id="0" name="Tag">&quot;bgm&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="681728116139945" type="Audio">
+                            <param id="0" name="Audio file">6_Ascend music final (with solo)</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="894447803390418">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="374066514141876">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

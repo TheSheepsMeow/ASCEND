@@ -11,13 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Level 1</layout>
-        <layout order="1">Level 2</layout>
-        <layout order="2">EndScreen</layout>
-        <layout active="1" order="3">Title</layout>
-        <event-sheet order="4">LocalStorage</event-sheet>
+        <layout active="1" order="1">Level 2</layout>
+        <layout order="2">Level 3</layout>
+        <event-sheet order="3">Game</event-sheet>
+        <event-sheet order="4">End</event-sheet>
         <event-sheet order="5">Title</event-sheet>
-        <event-sheet order="6">Game</event-sheet>
-        <event-sheet order="7">End</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -101,5 +99,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/thesheepsmeow/" />
         <folder expanded="1" path="animation-folder/muteButton/" />
         <folder expanded="1" path="animation-folder/AscendTitle/" />
+        <folder expanded="1" path="animation-folder/menuButtonHome/" />
+        <folder expanded="1" path="animation-folder/Home_/" />
+        <folder expanded="1" path="animation-folder/Retry_/" />
     </folders-expanded>
 </c2uistate>
