@@ -1345,16 +1345,16 @@
         <global-instance type="Function" uid="410" />
     </global-instances>
     <sounds-folder>
-        <file name="Jump 20.m4a" />
-        <file name="Jump 20.ogg" />
-        <file name="Laser-shoot 16.m4a" />
-        <file name="Laser-shoot 16.ogg" />
-        <file name="die.m4a" />
-        <file name="die.ogg" />
-        <file name="levelchange.m4a" />
-        <file name="levelchange.ogg" />
-        <file name="levelComplete.m4a" />
-        <file name="levelComplete.ogg" />
+        <file name="die2.m4a" />
+        <file name="die2.ogg" />
+        <file name="Jump2.m4a" />
+        <file name="Jump2.ogg" />
+        <file name="levelchange2.m4a" />
+        <file name="levelchange2.ogg" />
+        <file name="levelComplete2.m4a" />
+        <file name="levelComplete2.ogg" />
+        <file name="shoot2.m4a" />
+        <file name="shoot2.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="1_Ascend music (before shots being introduced).m4a" />

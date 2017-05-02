@@ -19,12 +19,6 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">2</param>
                         </action>
-                        <action id="0" name="Play" sid="257240495219450" type="Audio">
-                            <param id="0" name="Audio file">levelchange</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action id="-4" name="Set position to another object" sid="667587080400859" type="Player">
                             <param id="0" name="Object">PlayerStart2</param>
                             <param id="1" name="Image point (optional)">0</param>
@@ -44,12 +38,6 @@
                         <action id="-9" name="Set value" sid="556239860481469" type="System">
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="0" name="Play" sid="266570879810537" type="Audio">
-                            <param id="0" name="Audio file">levelchange</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-4" name="Set position to another object" sid="128837434654359" type="Player">
                             <param id="0" name="Object">PlayerStart3</param>
@@ -71,12 +59,6 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">4</param>
                         </action>
-                        <action id="0" name="Play" sid="826615455374832" type="Audio">
-                            <param id="0" name="Audio file">levelchange</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action id="-4" name="Set position to another object" sid="391172895849532" type="Player">
                             <param id="0" name="Object">PlayerStart4</param>
                             <param id="1" name="Image point (optional)">0</param>
@@ -97,12 +79,6 @@
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">5</param>
                         </action>
-                        <action id="0" name="Play" sid="288393956004359" type="Audio">
-                            <param id="0" name="Audio file">levelchange</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action id="-4" name="Set position to another object" sid="972636207395005" type="Player">
                             <param id="0" name="Object">PlayerStart5</param>
                             <param id="1" name="Image point (optional)">0</param>
@@ -122,12 +98,6 @@
                         <action id="-9" name="Set value" sid="185147998896041" type="System">
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">6</param>
-                        </action>
-                        <action id="0" name="Play" sid="306663959884679" type="Audio">
-                            <param id="0" name="Audio file">levelchange</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-4" name="Set position to another object" sid="362877199247466" type="Player">
                             <param id="0" name="Object">PlayerStart6</param>
@@ -151,12 +121,6 @@
                         <action id="-9" name="Set value" sid="253474114405162" type="System">
                             <param id="0" name="Variable">Level</param>
                             <param id="1" name="Value">7</param>
-                        </action>
-                        <action id="0" name="Play" sid="787430098413363" type="Audio">
-                            <param id="0" name="Audio file">levelchange</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-4" name="Set position to another object" sid="652607415355769" type="Player">
                             <param id="0" name="Object">PlayerStart7</param>
