@@ -2070,6 +2070,7 @@
                     </properties>
                     <instance-variables>
                         <Dead>false</Dead>
+                        <canGetHit>true</canGetHit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

@@ -147,6 +147,12 @@
                                 <condition id="4" inverted="1" name="Is touching object" sid="502131439772661" type="Touch">
                                     <param id="0" name="Object">menuButtonHome</param>
                                 </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="894084111184749" type="Player">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="621365473416321" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="521340745960475" type="Player">
@@ -239,7 +245,7 @@
                                 <action id="0" name="Play" sid="941281158025931" type="Audio">
                                     <param id="0" name="Audio file">Jump2</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">20</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="453104971807855" type="Player">
@@ -1779,6 +1785,9 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="603737608113194" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="962397378792267" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="338973764139331" type="BulletLeft">
@@ -1815,6 +1824,10 @@
                         <action id="-13" name="Set boolean" sid="236553042384175" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="779157918606549" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="622831205771368" type="System">
                             <param id="0" name="Variable">TextGoBack</param>
@@ -1855,6 +1868,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="934874771823460" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="989692868956498" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="951760411108831">
@@ -1889,6 +1909,13 @@
                                 <action id="-13" name="Set boolean" sid="600249578226919" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="322083863756594" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="129248797310347" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1925,6 +1952,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="888524339133131" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="196048254233438" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="908026617931196">
@@ -1959,6 +1993,13 @@
                                 <action id="-13" name="Set boolean" sid="200314999675062" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="356482437612297" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="247515662305435" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1995,6 +2036,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="777476154329807" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="570919920660915" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="805757636240753">
@@ -2029,6 +2077,13 @@
                                 <action id="-13" name="Set boolean" sid="803799525381025" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="717113168254058" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="298879601767614" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2068,6 +2123,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="259860881097597" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="290792355225894" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="315937752205324">
@@ -2105,6 +2167,13 @@
                                 <action id="-13" name="Set boolean" sid="373713034266633" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="713460306014223" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="725005658018923" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2144,6 +2213,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="115187866082664" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="936414749917955" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="530627887542599">
@@ -2182,6 +2258,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="371959105855567" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="911700811348764" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2212,6 +2295,9 @@
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="330979542576465" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="378301613201069" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2249,6 +2335,10 @@
                         <action id="-13" name="Set boolean" sid="843924436536163" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="331229342638292" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="634706120195925" type="System">
                             <param id="0" name="Variable">TextGoBack</param>
@@ -2289,6 +2379,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="779273935339737" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="376356396679378" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="514340925263688">
@@ -2323,6 +2420,13 @@
                                 <action id="-13" name="Set boolean" sid="373052967352991" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="732876468579719" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="957170140552598" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2359,6 +2463,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="703482991477856" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="655290010961487" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="661368652005777">
@@ -2393,6 +2504,13 @@
                                 <action id="-13" name="Set boolean" sid="282533217683813" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="187226474879186" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="502781220020699" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2429,6 +2547,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="589589346526193" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="245477423238187" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="267394251824494">
@@ -2463,6 +2588,13 @@
                                 <action id="-13" name="Set boolean" sid="862285544907547" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="617432814533064" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="114578022966027" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2502,6 +2634,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="674325685777785" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="241256551913711" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="892122644112285">
@@ -2539,6 +2678,13 @@
                                 <action id="-13" name="Set boolean" sid="654011137705620" type="Player">
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="644715175550496" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="655274371266918" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -2578,6 +2724,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="171388813029028" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="405442799658287" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="331056459912114">
@@ -2616,6 +2769,13 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="379861272209896" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="326548518074641" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -2640,6 +2800,9 @@
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="629839245473620" type="Player">
                             <param id="0" name="Instance variable">Dead</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="321997242023311" type="Player">
+                            <param id="0" name="Instance variable">canGetHit</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -2701,6 +2864,10 @@
                                     <param id="0" name="Instance variable">Dead</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="214776474258277" type="Player">
+                                    <param id="0" name="Instance variable">canGetHit</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="353644563039315" type="System">
                                     <param id="0" name="Variable">TextGoBack</param>
                                     <param id="1" name="Value">-1</param>
@@ -2740,6 +2907,13 @@
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="920265251987303" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="775400117802696" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="636506638843043">
@@ -2774,6 +2948,13 @@
                                         <action id="-13" name="Set boolean" sid="998636847367235" type="Player">
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="733493580231253" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="731140895121994" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2810,6 +2991,13 @@
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="525061574949002" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="374328408799339" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="469242695574095">
@@ -2844,6 +3032,13 @@
                                         <action id="-13" name="Set boolean" sid="676605247730597" type="Player">
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="805930317166495" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="236073702477421" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2880,6 +3075,13 @@
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="128894853106864" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="996330082490300" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="464423940291984">
@@ -2914,6 +3116,13 @@
                                         <action id="-13" name="Set boolean" sid="896766801447662" type="Player">
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="210370904455289" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="147121579831680" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2953,6 +3162,13 @@
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="290299299694893" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="156395820273717" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="750486661466771">
@@ -2990,6 +3206,13 @@
                                         <action id="-13" name="Set boolean" sid="590348989329641" type="Player">
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="614271431619982" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="414261757770578" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3029,6 +3252,13 @@
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="544523140816835" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="219230863268309" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="308012710179030">
@@ -3066,6 +3296,13 @@
                                         <action id="-13" name="Set boolean" sid="473750111714186" type="Player">
                                             <param id="0" name="Instance variable">Dead</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="436205137387853" type="System">
+                                            <param id="0" name="Seconds">0.5</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="733765471832086" type="Player">
+                                            <param id="0" name="Instance variable">canGetHit</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3227,6 +3464,7 @@
                                     <param id="3" name="Value">-180</param>
                                 </condition>
                                 <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="929424227528066" type="Platform" />
+                                <condition id="-3" name="Is on-screen" sid="938877810821614" type="Platform" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="589956989040112" type="Platform">
@@ -3248,6 +3486,7 @@
                                     <param id="3" name="Value">0</param>
                                 </condition>
                                 <condition behavior="Sine" id="0" inverted="1" name="Is active" sid="503593765724447" type="Platform" />
+                                <condition id="-3" name="Is on-screen" sid="813800761811067" type="Platform" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="760358066642270" type="Platform">
@@ -3268,6 +3507,7 @@
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">-180</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="810594970660302" type="RedPlatform" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="404140083110322" type="RedPlatform">
@@ -3288,6 +3528,7 @@
                                     <param id="2" name="Comparison">0</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="327795991001039" type="RedPlatform" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="790038939090331" type="RedPlatform">
@@ -3308,6 +3549,7 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="207950406715264" type="BulletSpin1" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="316539415261465" type="BulletSpin1">
@@ -3325,6 +3567,7 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="963998906519943" type="BulletSpin1" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="635636290349624" type="BulletSpin1">
@@ -3342,6 +3585,7 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="362627942248233" type="BulletSpin2" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="844161280298444" type="BulletSpin2">
@@ -3359,6 +3603,7 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="473799449693291" type="BulletSpin2" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="763175121582601" type="BulletSpin2">
@@ -3376,6 +3621,7 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="885809577264035" type="BulletSpin3" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="103150366774231" type="BulletSpin3">
@@ -3393,6 +3639,7 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="210595882829602" type="BulletSpin3" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="508279533887786" type="BulletSpin3">
@@ -3410,6 +3657,7 @@
                                     <param id="2" name="Comparison">4</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="627437572543963" type="BulletSpin4" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="128708535105587" type="BulletSpin4">
@@ -3427,6 +3675,7 @@
                                     <param id="2" name="Comparison">2</param>
                                     <param id="3" name="Value">0</param>
                                 </condition>
+                                <condition id="-3" name="Is on-screen" sid="292330898851876" type="BulletSpin4" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="365698657791568" type="BulletSpin4">
@@ -3439,6 +3688,7 @@
                         <event-block sid="600444019360447">
                             <conditions>
                                 <condition behavior="Sine" id="0" name="Is active" sid="662591898276119" type="Platform" />
+                                <condition id="-3" name="Is on-screen" sid="861742026886866" type="Platform" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Spawn another object" sid="481698868399595" type="Platform">
@@ -3447,10 +3697,6 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="824265272465582">
-                            <conditions />
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -3769,12 +4015,28 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="894447803390418">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="621621777807258" type="BG" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set spraying" sid="213001155319827" type="BG">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723105232267581">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="806844553267333" type="BG" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set spraying" sid="706095721608946" type="BG">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="489689231000412" title="Music">
             <sub-events>
-                <event-block sid="713550039076495">
-                    <conditions />
-                    <actions />
-                </event-block>
                 <event-block sid="363451413138360">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="916953457239672" type="System">
@@ -3796,7 +4058,7 @@
                         <action id="0" name="Play" sid="965859541578711" type="Audio">
                             <param id="0" name="Audio file">1_Ascend music (before shots being introduced)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
@@ -3822,7 +4084,7 @@
                         <action id="0" name="Play" sid="958428759939585" type="Audio">
                             <param id="0" name="Audio file">2_Ascend music (when shots are introduced)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
@@ -3848,7 +4110,7 @@
                         <action id="0" name="Play" sid="817201729013577" type="Audio">
                             <param id="0" name="Audio file">3_Ascend music (with Hi Hat)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
@@ -3874,7 +4136,7 @@
                         <action id="0" name="Play" sid="461716351148768" type="Audio">
                             <param id="0" name="Audio file">4_Ascend music (with almost all instruments)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
@@ -3900,7 +4162,7 @@
                         <action id="0" name="Play" sid="819330877146047" type="Audio">
                             <param id="0" name="Audio file">5_Ascend music (complete)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
@@ -3926,18 +4188,10 @@
                         <action id="0" name="Play" sid="681728116139945" type="Audio">
                             <param id="0" name="Audio file">6_Ascend music final (with solo)</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-10</param>
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="894447803390418">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block sid="374066514141876">
-                    <conditions />
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

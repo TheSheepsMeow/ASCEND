@@ -69,6 +69,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Dead" sid="236898646905819" type="boolean" />
+                <instance-variable name="canGetHit" sid="289474475180685" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="219831824579635">
