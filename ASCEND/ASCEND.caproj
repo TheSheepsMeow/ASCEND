@@ -2,7 +2,7 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.1</version>
+    <version>0.2</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>http://www.thesheepsmeow.com</author-website>
@@ -59,7 +59,7 @@
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
-        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preload sounds">No</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
