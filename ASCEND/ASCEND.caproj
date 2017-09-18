@@ -2,7 +2,7 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.2</version>
+    <version>0.3</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>http://www.thesheepsmeow.com</author-website>
@@ -1049,7 +1049,7 @@
             <plugin id="Spritefont2" />
             <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
         </object-type>
-        <object-type name="ad" sid="441138094037833">
+        <object-type name="moregames" sid="441138094037833">
             <plugin id="NinePatch" />
             <texture original-source="C:\MEOW\ASCEND\Title\MoreGames.png" />
         </object-type>
