@@ -3,12 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DevCodes</name>
     <events>
-        <event-group description="" sid="508773503528293" title="DevCodes (disable this before export)">
+        <event-group description="" disabled="1" sid="508773503528293" title="DevCodes (disable this before export)">
             <sub-events>
-                <event-block sid="853927164494478">
+                <event-block disabled="1" sid="853927164494478">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="518598435501799" type="Keyboard">
-                            <param id="0" name="Key">98 (Num 2)</param>
+                            <param id="0" name="Key">98</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -25,10 +25,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="752413104044535">
+                <event-block disabled="1" sid="752413104044535">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="736961584852675" type="Keyboard">
-                            <param id="0" name="Key">99 (Num 3)</param>
+                            <param id="0" name="Key">99</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -45,10 +45,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="916683243741351">
+                <event-block disabled="1" sid="916683243741351">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="539480473105827" type="Keyboard">
-                            <param id="0" name="Key">100 (Num 4)</param>
+                            <param id="0" name="Key">100</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -65,10 +65,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="121053258484747">
+                <event-block disabled="1" sid="121053258484747">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="572207717536205" type="Keyboard">
-                            <param id="0" name="Key">101 (Num 5)</param>
+                            <param id="0" name="Key">101</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -85,10 +85,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="267483045422282">
+                <event-block disabled="1" sid="267483045422282">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="733370356805342" type="Keyboard">
-                            <param id="0" name="Key">102 (Num 6)</param>
+                            <param id="0" name="Key">102</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -105,10 +105,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="770278591076368">
+                <event-block disabled="1" sid="770278591076368">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="732884818293448" type="Keyboard">
-                            <param id="0" name="Key">103 (Num 7)</param>
+                            <param id="0" name="Key">103</param>
                         </condition>
                         <condition id="-16" name="Pick random instance" sid="739761666794440" type="System">
                             <param id="0" name="Object">PlayerStart7</param>

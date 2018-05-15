@@ -2,13 +2,13 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.3</version>
+    <version>0.4</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>http://www.thesheepsmeow.com</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3jv3hs0fp0y98</unique-id>
-    <saved-with-version>24400</saved-with-version>
+    <saved-with-version>25900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
