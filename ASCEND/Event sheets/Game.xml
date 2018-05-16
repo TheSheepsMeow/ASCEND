@@ -245,7 +245,7 @@
                                 <action id="0" name="Play" sid="941281158025931" type="Audio">
                                     <param id="0" name="Audio file">Jump2</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">20</param>
+                                    <param id="3" name="Volume">-15</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="4" name="Set animation" sid="453104971807855" type="Player">
@@ -301,7 +301,7 @@
                             <param id="1" name="Y">lerp(Self.Y, 0, 0.05)</param>
                         </action>
                         <action id="2" name="Set scale" sid="553823202464131" type="DeathsText">
-                            <param id="0" name="Scale">0.35</param>
+                            <param id="0" name="Scale">0.25</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -335,7 +335,7 @@
                             <param id="1" name="Y">192</param>
                         </action>
                         <action id="2" name="Set scale" sid="489247468235046" type="DeathsText">
-                            <param id="0" name="Scale">0.5</param>
+                            <param id="0" name="Scale">0.4</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -413,7 +413,7 @@
                                 <action id="0" name="Play" sid="629472323231489" type="Audio">
                                     <param id="0" name="Audio file">levelComplete2</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="271719267412379" type="Fade">
@@ -469,7 +469,7 @@
                                 <action id="0" name="Play" sid="580382225086201" type="Audio">
                                     <param id="0" name="Audio file">levelComplete2</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="105886993143039" type="Fade">
@@ -525,7 +525,7 @@
                                 <action id="0" name="Play" sid="543213760129730" type="Audio">
                                     <param id="0" name="Audio file">levelComplete2</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
+                                    <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="934138821582811" type="Fade">
@@ -597,7 +597,7 @@
                         <action id="0" name="Play" sid="301250595568341" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="199967199026395" type="System">
@@ -666,7 +666,7 @@
                         <action id="0" name="Play" sid="357961958208191" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="537924882871550" type="System">
@@ -732,7 +732,7 @@
                         <action id="0" name="Play" sid="490696447080758" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="820581694210498" type="System">
@@ -798,7 +798,7 @@
                         <action id="0" name="Play" sid="177207822678680" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="539234750870114" type="System">
@@ -864,7 +864,7 @@
                         <action id="0" name="Play" sid="996006815266914" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="459668315438134" type="System">
@@ -930,7 +930,7 @@
                         <action id="0" name="Play" sid="273735874569900" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="328755319745168" type="System">
@@ -996,7 +996,7 @@
                         <action id="0" name="Play" sid="699064785874846" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="279570851507329" type="System">
@@ -1062,7 +1062,7 @@
                         <action id="0" name="Play" sid="263096815123222" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="489371697319459" type="System">
@@ -1128,7 +1128,7 @@
                         <action id="0" name="Play" sid="761700719430724" type="Audio">
                             <param id="0" name="Audio file">levelchange2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="230507115895035" type="System">
@@ -3773,7 +3773,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="903631470674891" type="DeathsText">
-                            <param id="0" name="Text">&quot;deaths: &quot; &amp; Deaths</param>
+                            <param id="0" name="Text">&quot;resets: &quot; &amp; Deaths</param>
                         </action>
                         <action id="0" name="Set text" sid="259320394899781" type="Timer">
                             <param id="0" name="Text">zeropad(floor(Timer/60 % 60), 2) &amp; &quot;:&quot; &amp; zeropad(floor(Timer % 60), 2)</param>

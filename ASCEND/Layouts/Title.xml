@@ -141,8 +141,8 @@
                         <x>249.047012329</x>
                         <y>80.994659424</y>
                         <z>0</z>
-                        <width>89</width>
-                        <height>62</height>
+                        <width>63.949623108</width>
+                        <height>44.549175262</height>
                         <depth>0</depth>
                         <hotspotX>0.505617976</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -278,7 +278,7 @@
                         <character-height>77</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Josiah Hunt, Brian Chung, Warren Savage, Rebeca Jimenez</text>
-                        <scale>0.15</scale>
+                        <scale>0.1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -290,11 +290,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>121.078018188</x>
-                        <y>409.75869751</y>
+                        <x>77.441886902</x>
+                        <y>418.97567749</y>
                         <z>0</z>
-                        <width>204.857513428</width>
-                        <height>32.100646973</height>
+                        <width>133.375534058</width>
+                        <height>22.093048096</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

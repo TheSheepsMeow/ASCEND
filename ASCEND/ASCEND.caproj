@@ -2,7 +2,7 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.4</version>
+    <version>0.5</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>http://www.thesheepsmeow.com</author-website>
@@ -1264,6 +1264,10 @@
         <object-type name="pauseBG" sid="951353399552454">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="textMenu" sid="267605995965218">
+            <plugin id="Spritefont2" />
+            <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
         </object-type>
     </object-folder>
     <families>

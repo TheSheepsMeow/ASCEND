@@ -2261,8 +2261,8 @@
                         <character-width>45</character-width>
                         <character-height>77</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>deaths: 0</text>
-                        <scale>0.35</scale>
+                        <text>resets: 0</text>
+                        <scale>0.25</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -2374,7 +2374,7 @@
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.800000012</opacity>
+                        <opacity>0.899999976</opacity>
                     </world>
                 </instance>
                 <instance type="Home_" uid="389">
@@ -2387,11 +2387,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160.5</x>
-                        <y>194.626876831</y>
+                        <x>299.678710938</x>
+                        <y>20.321279526</y>
                         <z>0</z>
-                        <width>67</width>
-                        <height>66</height>
+                        <width>41.258354187</width>
+                        <height>40.642559052</height>
                         <depth>0</depth>
                         <hotspotX>0.50746268</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2414,6 +2414,66 @@
                         <z>0</z>
                         <width>134</width>
                         <height>132</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="textMenu" uid="420">
+                    <properties>
+                        <character-width>45</character-width>
+                        <character-height>77</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>PAUSED</text>
+                        <scale>0.5</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>159.999969482</x>
+                        <y>220.584533691</y>
+                        <z>0</z>
+                        <width>306</width>
+                        <height>75.179527283</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="textMenu" uid="421">
+                    <properties>
+                        <character-width>45</character-width>
+                        <character-height>77</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>tap anywhere to continue</text>
+                        <scale>0.2</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>159.999969482</x>
+                        <y>271.517303467</y>
+                        <z>0</z>
+                        <width>306</width>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
