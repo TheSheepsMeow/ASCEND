@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BG" uid="415">
+                <instance type="bgParticles" uid="415">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -138,11 +138,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>249.047012329</x>
-                        <y>80.994659424</y>
+                        <x>259.774993896</x>
+                        <y>80</y>
                         <z>0</z>
-                        <width>63.949623108</width>
-                        <height>44.549175262</height>
+                        <width>42.24961853</width>
+                        <height>29.432319641</height>
                         <depth>0</depth>
                         <hotspotX>0.505617976</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -277,7 +277,7 @@
                         <character-width>44</character-width>
                         <character-height>77</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Josiah Hunt, Brian Chung, Warren Savage, Rebeca Jimenez</text>
+                        <text>Brian Chung, GJ Lee, Josiah Hunt, Warren Savage, Rebeca Jimenez</text>
                         <scale>0.1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -290,10 +290,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>77.441886902</x>
+                        <x>86.949890137</x>
                         <y>418.97567749</y>
                         <z>0</z>
-                        <width>133.375534058</width>
+                        <width>152.391540527</width>
                         <height>22.093048096</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -312,7 +312,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <hotspot>Left</hotspot>
                         <wrapping>Word</wrapping>
                         <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
@@ -321,13 +321,13 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>35.14402771</x>
-                        <y>75.400268555</y>
+                        <y>80</y>
                         <z>0</z>
                         <width>167.911132813</width>
                         <height>17.029056549</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -381,26 +381,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="tiledBG" uid="407">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Center</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>249.975097656</x>
-                        <y>15.441105843</y>
-                        <z>0</z>
-                        <width>140.049835205</width>
-                        <height>30.882213593</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.200000003</opacity>
-                    </world>
-                </instance>
                 <instance type="textDebug" uid="408">
                     <properties>
                         <character-width>16</character-width>
@@ -419,8 +399,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>208.975097656</x>
-                        <y>8.441105843</y>
+                        <x>208.975067139</x>
+                        <y>8.441104889</y>
                         <z>0</z>
                         <width>109.030906677</width>
                         <height>21.762180328</height>

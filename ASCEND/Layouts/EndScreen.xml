@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DeathsText" uid="54">
+                <instance type="resetsText" uid="54">
                     <properties>
                         <character-width>45</character-width>
                         <character-height>77</character-height>

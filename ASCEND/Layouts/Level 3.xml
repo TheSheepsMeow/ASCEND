@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BG" uid="256">
+                <instance type="bgParticles" uid="256">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -88,7 +88,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="237">
+                <instance type="bgParticles" uid="237">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -127,7 +127,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="238">
+                <instance type="bgParticles" uid="238">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -234,7 +234,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="242">
+                <instance type="bgParticles" uid="242">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -273,7 +273,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="243">
+                <instance type="bgParticles" uid="243">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -468,7 +468,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="250">
+                <instance type="bgParticles" uid="250">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -573,7 +573,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="254">
+                <instance type="bgParticles" uid="254">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -656,7 +656,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="259">
+                <instance type="bgParticles" uid="259">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -717,7 +717,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="265">
+                <instance type="bgParticles" uid="265">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -778,7 +778,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="270">
+                <instance type="bgParticles" uid="270">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -6156,7 +6156,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DeathsText" uid="399">
+                <instance type="resetsText" uid="399">
                     <properties>
                         <character-width>45</character-width>
                         <character-height>77</character-height>

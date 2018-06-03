@@ -8,7 +8,7 @@
                 <condition id="-2" name="On start of layout" sid="482491887727573" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="628521116865104" type="DeathsText">
+                <action id="0" name="Set text" sid="628521116865104" type="resetsText">
                     <param id="0" name="Text">&quot;resets: &quot; &amp; Deaths</param>
                 </action>
                 <action id="0" name="Set text" sid="378130515446472" type="Timer">

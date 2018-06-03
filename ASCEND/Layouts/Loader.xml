@@ -183,26 +183,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="tiledBG" uid="423">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Center</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>249.975097656</x>
-                        <y>15.441105843</y>
-                        <z>0</z>
-                        <width>140.049835205</width>
-                        <height>30.882213593</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.200000003</opacity>
-                    </world>
-                </instance>
                 <instance type="textDebug" uid="424">
                     <properties>
                         <character-width>16</character-width>

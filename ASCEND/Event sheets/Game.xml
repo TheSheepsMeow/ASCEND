@@ -296,11 +296,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="995655876997177" type="DeathsText">
+                        <action id="-3" name="Set position" sid="995655876997177" type="resetsText">
                             <param id="0" name="X">lerp(Self.X, 312, 0.05)</param>
                             <param id="1" name="Y">lerp(Self.Y, 0, 0.05)</param>
                         </action>
-                        <action id="2" name="Set scale" sid="553823202464131" type="DeathsText">
+                        <action id="2" name="Set scale" sid="553823202464131" type="resetsText">
                             <param id="0" name="Scale">0.25</param>
                         </action>
                     </actions>
@@ -330,11 +330,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="578860337180197" type="DeathsText">
+                        <action id="-3" name="Set position" sid="578860337180197" type="resetsText">
                             <param id="0" name="X">264</param>
                             <param id="1" name="Y">192</param>
                         </action>
-                        <action id="2" name="Set scale" sid="489247468235046" type="DeathsText">
+                        <action id="2" name="Set scale" sid="489247468235046" type="resetsText">
                             <param id="0" name="Scale">0.4</param>
                         </action>
                     </actions>
@@ -3772,7 +3772,7 @@
                         <condition id="-1" name="Every tick" sid="218169172853678" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="903631470674891" type="DeathsText">
+                        <action id="0" name="Set text" sid="903631470674891" type="resetsText">
                             <param id="0" name="Text">&quot;resets: &quot; &amp; Deaths</param>
                         </action>
                         <action id="0" name="Set text" sid="259320394899781" type="Timer">
@@ -4017,20 +4017,20 @@
         </event-group>
         <event-block sid="894447803390418">
             <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="621621777807258" type="BG" />
+                <condition id="-3" inverted="1" name="Is on-screen" sid="621621777807258" type="bgParticles" />
             </conditions>
             <actions>
-                <action id="0" name="Set spraying" sid="213001155319827" type="BG">
+                <action id="0" name="Set spraying" sid="213001155319827" type="bgParticles">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="723105232267581">
             <conditions>
-                <condition id="-3" name="Is on-screen" sid="806844553267333" type="BG" />
+                <condition id="-3" name="Is on-screen" sid="806844553267333" type="bgParticles" />
             </conditions>
             <actions>
-                <action id="0" name="Set spraying" sid="706095721608946" type="BG">
+                <action id="0" name="Set spraying" sid="706095721608946" type="bgParticles">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>

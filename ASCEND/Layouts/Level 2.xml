@@ -49,7 +49,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="61">
+                <instance type="bgParticles" uid="61">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -88,7 +88,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="58">
+                <instance type="bgParticles" uid="58">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -195,7 +195,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="59">
+                <instance type="bgParticles" uid="59">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -234,7 +234,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="60">
+                <instance type="bgParticles" uid="60">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -429,7 +429,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="135">
+                <instance type="bgParticles" uid="135">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -534,7 +534,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="144">
+                <instance type="bgParticles" uid="144">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -595,7 +595,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="BG" uid="145">
+                <instance type="bgParticles" uid="145">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>1</spray-cone>
@@ -2417,7 +2417,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>32</x>
-                        <y>2656</y>
+                        <y>2664</y>
                         <z>0</z>
                         <width>64</width>
                         <height>16</height>
@@ -2451,7 +2451,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>32</x>
-                        <y>2560</y>
+                        <y>2576</y>
                         <z>0</z>
                         <width>64</width>
                         <height>16</height>
@@ -5315,6 +5315,63 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="RedPlatform" uid="422">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Triangle</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>140</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Wrap">
+                            <properties>
+                                <wrap-to>Layout</wrap-to>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>2408</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -5585,7 +5642,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DeathsText" uid="229">
+                <instance type="resetsText" uid="229">
                     <properties>
                         <character-width>45</character-width>
                         <character-height>77</character-height>

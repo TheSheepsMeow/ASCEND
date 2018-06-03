@@ -10,7 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <event-sheet active="1" order="0">DevCodes</event-sheet>
+        <layout order="2">Level 2</layout>
+        <layout active="1" order="1">Level 1</layout>
+        <event-sheet order="0">DevCodes</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,78 +26,88 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Objects Bullets/" />
+        <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/Title/" />
+        <folder expanded="0" path="object-folder/System/" />
+        <folder expanded="0" path="object-folder/Objects Platforms/" />
+        <folder expanded="0" path="object-folder/Camera/" />
+        <folder expanded="0" path="object-folder/Level Triggers/" />
+        <folder expanded="1" path="object-folder/Objects Hazards/" />
+        <folder expanded="1" path="object-folder/Environment/" />
+        <folder expanded="1" path="object-folder/Level Objects/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Player/" />
-        <folder expanded="1" path="animation-folder/PlatformStatic/" />
-        <folder expanded="1" path="animation-folder/Platform/" />
-        <folder expanded="1" path="animation-folder/Camera/" />
-        <folder expanded="1" path="animation-folder/PlayerStart1/" />
-        <folder expanded="1" path="animation-folder/levelTrigger1/" />
-        <folder expanded="1" path="animation-folder/levelTrigger2/" />
-        <folder expanded="1" path="animation-folder/BulletRight/" />
+        <folder expanded="1" path="animation-folder/BulletSpin1/" />
+        <folder expanded="1" path="animation-folder/BulletFadeRight/" />
+        <folder expanded="1" path="animation-folder/BulletFadeLeft/" />
         <folder expanded="1" path="animation-folder/BulletLeft/" />
-        <folder expanded="1" path="animation-folder/ShootLeft/" />
-        <folder expanded="1" path="animation-folder/ShootRight/" />
-        <folder expanded="1" path="animation-folder/PlayerStart2/" />
-        <folder expanded="1" path="animation-folder/PlayerStart3/" />
-        <folder expanded="1" path="animation-folder/FlashRight/" />
+        <folder expanded="1" path="animation-folder/BulletSpin3/" />
+        <folder expanded="1" path="animation-folder/BulletFadeSpin/" />
+        <folder expanded="1" path="animation-folder/BulletSpin2/" />
+        <folder expanded="1" path="animation-folder/BulletSpin4/" />
+        <folder expanded="1" path="animation-folder/BulletRight/" />
         <folder expanded="1" path="animation-folder/FlashLeft/" />
-        <folder expanded="1" path="animation-folder/levelTrigger3/" />
-        <folder expanded="1" path="animation-folder/PlayerStart4/" />
-        <folder expanded="1" path="animation-folder/Goal/" />
-        <folder expanded="1" path="animation-folder/SharpObject/" />
+        <folder expanded="1" path="animation-folder/FlashRight/" />
+        <folder expanded="1" path="animation-folder/Home_/" />
         <folder expanded="1" path="animation-folder/Fade/" />
-        <folder expanded="1" path="animation-folder/RedPlatform/" />
-        <folder expanded="1" path="animation-folder/C1/" />
-        <folder expanded="1" path="animation-folder/C2/" />
-        <folder expanded="1" path="animation-folder/C3/" />
-        <folder expanded="1" path="animation-folder/C4/" />
-        <folder expanded="1" path="animation-folder/Ground/" />
+        <folder expanded="1" path="animation-folder/menuButton/" />
+        <folder expanded="1" path="animation-folder/menuButtonHome/" />
+        <folder expanded="1" path="animation-folder/Retry_/" />
         <folder expanded="1" path="animation-folder/RedScreen/" />
-        <folder expanded="1" path="animation-folder/C5/" />
-        <folder expanded="1" path="animation-folder/levelTrigger4/" />
-        <folder expanded="1" path="animation-folder/PlayerStart5/" />
-        <folder expanded="1" path="animation-folder/levelTrigger5/" />
-        <folder expanded="1" path="animation-folder/levelTrigger6/" />
-        <folder expanded="1" path="animation-folder/C6/" />
-        <folder expanded="1" path="animation-folder/C7/" />
-        <folder expanded="1" path="animation-folder/PlayerStart6/" />
-        <folder expanded="1" path="animation-folder/PlayerStart7/" />
+        <folder expanded="1" path="animation-folder/AscendTitle/" />
+        <folder expanded="1" path="animation-folder/muteButton/" />
+        <folder expanded="1" path="animation-folder/menuButtonReset/" />
+        <folder expanded="1" path="animation-folder/thesheepsmeow/" />
+        <folder expanded="1" path="animation-folder/Platform/" />
+        <folder expanded="1" path="animation-folder/PlatformFade2/" />
+        <folder expanded="1" path="animation-folder/Ground/" />
+        <folder expanded="1" path="animation-folder/PlatformStatic/" />
         <folder expanded="1" path="animation-folder/PlatformFade/" />
         <folder expanded="1" path="animation-folder/PlatformFadeRed/" />
-        <folder expanded="1" path="animation-folder/tappingGesture/" />
+        <folder expanded="1" path="animation-folder/C1/" />
+        <folder expanded="1" path="animation-folder/C10/" />
+        <folder expanded="1" path="animation-folder/C3/" />
+        <folder expanded="1" path="animation-folder/C6/" />
+        <folder expanded="1" path="animation-folder/C5/" />
+        <folder expanded="1" path="animation-folder/C4/" />
+        <folder expanded="1" path="animation-folder/C8/" />
+        <folder expanded="1" path="animation-folder/C7/" />
+        <folder expanded="1" path="animation-folder/C2/" />
+        <folder expanded="1" path="animation-folder/C9/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/levelTrigger1/" />
+        <folder expanded="1" path="animation-folder/levelTrigger2/" />
+        <folder expanded="1" path="animation-folder/levelTrigger3/" />
+        <folder expanded="1" path="animation-folder/levelTrigger4/" />
+        <folder expanded="1" path="animation-folder/levelTrigger6/" />
+        <folder expanded="1" path="animation-folder/levelTrigger8/" />
+        <folder expanded="1" path="animation-folder/levelTrigger7/" />
+        <folder expanded="1" path="animation-folder/levelTrigger5/" />
+        <folder expanded="1" path="animation-folder/levelTrigger9/" />
+        <folder expanded="1" path="animation-folder/PlayerStart2/" />
+        <folder expanded="1" path="animation-folder/PlayerStart3/" />
+        <folder expanded="1" path="animation-folder/PlayerStart5/" />
+        <folder expanded="1" path="animation-folder/PlayerStart6/" />
+        <folder expanded="1" path="animation-folder/PlayerStart4/" />
+        <folder expanded="1" path="animation-folder/PlayerStart7/" />
+        <folder expanded="1" path="animation-folder/PlayerStart10/" />
+        <folder expanded="1" path="animation-folder/PlayerStart8/" />
+        <folder expanded="1" path="animation-folder/PlayerStart1/" />
+        <folder expanded="1" path="animation-folder/PlayerStart9/" />
+        <folder expanded="1" path="animation-folder/RedPlatform/" />
+        <folder expanded="1" path="animation-folder/SharpObject/" />
+        <folder expanded="1" path="animation-folder/ShootLeft/" />
+        <folder expanded="1" path="animation-folder/ShootRight/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/Goal/" />
         <folder expanded="1" path="animation-folder/swipeArrow/" />
         <folder expanded="1" path="animation-folder/swipeTrigger/" />
         <folder expanded="1" path="animation-folder/swipeTrigger2/" />
-        <folder expanded="1" path="animation-folder/BulletFadeLeft/" />
-        <folder expanded="1" path="animation-folder/BulletFadeRight/" />
-        <folder expanded="1" path="animation-folder/PlatformFade2/" />
-        <folder expanded="1" path="animation-folder/levelTrigger7/" />
-        <folder expanded="1" path="animation-folder/C8/" />
-        <folder expanded="1" path="animation-folder/PlayerStart8/" />
-        <folder expanded="1" path="animation-folder/levelTrigger8/" />
-        <folder expanded="1" path="animation-folder/C9/" />
-        <folder expanded="1" path="animation-folder/PlayerStart9/" />
-        <folder expanded="1" path="animation-folder/levelTrigger9/" />
-        <folder expanded="1" path="animation-folder/C10/" />
-        <folder expanded="1" path="animation-folder/PlayerStart10/" />
-        <folder expanded="1" path="animation-folder/BulletSpin1/" />
-        <folder expanded="1" path="animation-folder/BulletSpin2/" />
-        <folder expanded="1" path="animation-folder/BulletSpin3/" />
-        <folder expanded="1" path="animation-folder/BulletSpin4/" />
-        <folder expanded="1" path="animation-folder/BulletFadeSpin/" />
-        <folder expanded="1" path="animation-folder/menuButton/" />
-        <folder expanded="1" path="animation-folder/menuButtonReset/" />
-        <folder expanded="1" path="animation-folder/thesheepsmeow/" />
-        <folder expanded="1" path="animation-folder/muteButton/" />
-        <folder expanded="1" path="animation-folder/AscendTitle/" />
-        <folder expanded="1" path="animation-folder/menuButtonHome/" />
-        <folder expanded="1" path="animation-folder/Home_/" />
-        <folder expanded="1" path="animation-folder/Retry_/" />
+        <folder expanded="1" path="animation-folder/tappingGesture/" />
     </folders-expanded>
 </c2uistate>
