@@ -77,6 +77,31 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="371846609437111">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="355958833142869">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="389155656796059" type="endingAnimation">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">150</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="807486265670610" type="endingAnimation">
+                            <param id="0" name="Y">lerp(endingAnimation.Y, 150, 0.025)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="448770175947816">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="638572085467408">
+                    <conditions />
+                    <actions />
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" inactive="1" sid="704414232679296" title="Ending Completed">
