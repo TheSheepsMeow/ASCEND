@@ -152,6 +152,25 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block any="1" sid="326242882053125">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="643156782931501" type="Keyboard">
+                            <param id="0" name="Key">13</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="471186245940268" type="System">
+                            <param id="0" name="Variable">pressed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="522590754015809" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="394891928809553" type="System">
+                            <param id="0" name="Layout">Level 1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment></comment>
                 <event-block sid="670042667986549">
                     <conditions>
@@ -290,6 +309,10 @@
                     <actions />
                 </event-block>
                 <event-block sid="392327859434126">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="229029527434182">
                     <conditions />
                     <actions />
                 </event-block>

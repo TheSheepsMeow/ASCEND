@@ -96,8 +96,16 @@
                     <actions />
                     <sub-events>
                         <event-block sid="200777367598524">
-                            <conditions />
-                            <actions />
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="507949493126555" type="Keyboard">
+                                    <param id="0" name="Key">38</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="208894907411394" type="Player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="757649153843348">
                             <conditions>
@@ -115,12 +123,6 @@
                                     <param id="0" name="Control">2</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="334518114195313">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="310522178207424">
                             <conditions>
@@ -236,6 +238,16 @@
                                 <action behavior="Platform" id="12" name="Fall through" sid="361241469936821" type="Player" />
                             </actions>
                         </event-block>
+                        <event-block sid="969967855341711">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="613943581931126" type="Keyboard">
+                                    <param id="0" name="Key">40</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="995357407850036" type="Player" />
+                            </actions>
+                        </event-block>
                         <comment></comment>
                         <event-block sid="500612255294202">
                             <conditions>
@@ -282,6 +294,18 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="686178310767702">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="818346427131292">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="389202256267761">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -416,10 +440,10 @@
                                     <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="271719267412379" type="Fade">
+                                <action id="-15" name="Set visible" sid="271719267412379" type="FadeOut">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="745303655468611" type="Fade" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="745303655468611" type="FadeOut" />
                                 <action id="-16" name="Wait" sid="776144073029820" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
@@ -472,10 +496,10 @@
                                     <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="105886993143039" type="Fade">
+                                <action id="-15" name="Set visible" sid="105886993143039" type="FadeOut">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="351010877158125" type="Fade" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="351010877158125" type="FadeOut" />
                                 <action id="-16" name="Wait" sid="431467051707652" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
@@ -528,10 +552,10 @@
                                     <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="934138821582811" type="Fade">
+                                <action id="-15" name="Set visible" sid="934138821582811" type="FadeOut">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="418893765902035" type="Fade" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="418893765902035" type="FadeOut" />
                                 <action id="-16" name="Wait" sid="138020558610471" type="System">
                                     <param id="0" name="Seconds">1.0</param>
                                 </action>
@@ -3895,6 +3919,27 @@
                         <condition id="-9" name="Is visible" sid="195618688351581" type="menuButtonHome" />
                     </conditions>
                     <actions>
+                        <action id="-16" name="Wait" sid="153195406736425" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="511251115391669" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290964139801431">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="457394572703829" type="Keyboard">
+                            <param id="0" name="Key">27</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="729766915187163" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="502327542538857" type="menuButtonHome" />
+                    </conditions>
+                    <actions>
                         <action id="-16" name="Wait" sid="764286827732740" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
@@ -3983,7 +4028,21 @@
                                 <action id="-13" name="Set time scale" sid="719797010759676" type="System">
                                     <param id="0" name="Time scale">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="628820639647544" type="Retry_">
+                                    <param id="0" name="Animation">&quot;Animation2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="437638344608065" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
                                 <action id="-26" name="Restart layout" sid="929187904359120" type="System" />
+                                <action id="-4" name="Set layer visible" sid="124625900758848" type="System">
+                                    <param id="0" name="Layer">&quot;Menu&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="412650160673815" type="menuButtonHome">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Unpause</comment>
@@ -4007,34 +4066,29 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="112919175754026">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="690492731687673" type="Keyboard">
+                                    <param id="0" name="Key">27</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="160309572187888" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="152058876690128" type="System">
+                                    <param id="0" name="Layer">&quot;Menu&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="893596086956841" type="menuButtonHome">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="302698704572363">
-                    <conditions />
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="894447803390418">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="621621777807258" type="bgParticles" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set spraying" sid="213001155319827" type="bgParticles">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="723105232267581">
-            <conditions>
-                <condition id="-3" name="Is on-screen" sid="806844553267333" type="bgParticles" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set spraying" sid="706095721608946" type="bgParticles">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="489689231000412" title="Music">
             <sub-events>
                 <event-block sid="363451413138360">
@@ -4192,6 +4246,86 @@
                             <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="763325265942729" title="Goal">
+            <sub-events>
+                <event-block sid="819240198944701">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="702121016213619" type="System">
+                            <param id="0" name="Interval (seconds)">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="257653031486081" type="Goal">
+                            <param id="0" name="Object">GoalClone</param>
+                            <param id="1" name="Layer">Self.LayerNumber</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="162982067148022" type="GoalClone">
+                            <param id="0" name="Pin to">Goal</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="774511506953238">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="864710184947298">
+                    <conditions>
+                        <condition id="-5" name="Compare width" sid="118282744449517" type="GoalClone">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Width">0.01</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="232377535545161" type="GoalClone">
+                            <param id="0" name="Width">Self.Width * 0.975</param>
+                            <param id="1" name="Height">Self.Height *0.975</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="202838487327165">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="663004248358756">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="966543626680450" title="Background">
+            <sub-events>
+                <event-block sid="894447803390418">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="621621777807258" type="bgParticles" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="213001155319827" type="bgParticles">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="723105232267581">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="806844553267333" type="bgParticles" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set spraying" sid="706095721608946" type="bgParticles">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="861077684334416">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="499987928472239">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

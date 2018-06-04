@@ -10,9 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">Level 2</layout>
-        <layout active="1" order="1">Level 1</layout>
-        <event-sheet order="0">DevCodes</event-sheet>
+        <layout active="1" order="1">EndScreen</layout>
+        <layout order="3">Loader</layout>
+        <layout order="4">Title</layout>
+        <layout order="5">Level 3</layout>
+        <layout order="6">Level 1</layout>
+        <event-sheet order="0">Game</event-sheet>
+        <event-sheet order="2">End</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,17 +31,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Objects Bullets/" />
-        <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="1" path="object-folder/UI/" />
         <folder expanded="0" path="object-folder/Title/" />
         <folder expanded="0" path="object-folder/System/" />
         <folder expanded="0" path="object-folder/Objects Platforms/" />
         <folder expanded="0" path="object-folder/Camera/" />
         <folder expanded="0" path="object-folder/Level Triggers/" />
-        <folder expanded="1" path="object-folder/Objects Hazards/" />
-        <folder expanded="1" path="object-folder/Environment/" />
-        <folder expanded="1" path="object-folder/Level Objects/" />
+        <folder expanded="0" path="object-folder/Objects Hazards/" />
+        <folder expanded="0" path="object-folder/Environment/" />
+        <folder expanded="0" path="object-folder/Level Objects/" />
+        <folder expanded="1" path="object-folder/Ending/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="event-folder/Game/" />
+        <folder expanded="1" path="event-folder/System/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -54,15 +61,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/FlashLeft/" />
         <folder expanded="1" path="animation-folder/FlashRight/" />
         <folder expanded="1" path="animation-folder/Home_/" />
-        <folder expanded="1" path="animation-folder/Fade/" />
+        <folder expanded="1" path="animation-folder/FadeOut/" />
         <folder expanded="1" path="animation-folder/menuButton/" />
         <folder expanded="1" path="animation-folder/menuButtonHome/" />
         <folder expanded="1" path="animation-folder/Retry_/" />
         <folder expanded="1" path="animation-folder/RedScreen/" />
+        <folder expanded="1" path="animation-folder/levelButton/" />
+        <folder expanded="1" path="animation-folder/FadeIn/" />
         <folder expanded="1" path="animation-folder/AscendTitle/" />
         <folder expanded="1" path="animation-folder/muteButton/" />
         <folder expanded="1" path="animation-folder/menuButtonReset/" />
         <folder expanded="1" path="animation-folder/thesheepsmeow/" />
+        <folder expanded="1" path="animation-folder/TSM_icon/" />
         <folder expanded="1" path="animation-folder/Platform/" />
         <folder expanded="1" path="animation-folder/PlatformFade2/" />
         <folder expanded="1" path="animation-folder/Ground/" />
@@ -109,5 +119,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/swipeTrigger/" />
         <folder expanded="1" path="animation-folder/swipeTrigger2/" />
         <folder expanded="1" path="animation-folder/tappingGesture/" />
+        <folder expanded="1" path="animation-folder/GoalClone/" />
+        <folder expanded="1" path="animation-folder/endingAnimation/" />
     </folders-expanded>
 </c2uistate>

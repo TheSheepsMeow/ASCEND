@@ -343,6 +343,18 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -5706,7 +5718,7 @@
                                 <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Triangle</wave>
-                                <period>1</period>
+                                <period>3</period>
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
@@ -5734,7 +5746,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>3184</y>
+                        <y>3192</y>
                         <z>0</z>
                         <width>64</width>
                         <height>16</height>
@@ -5828,7 +5840,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>3176</y>
+                        <y>3192</y>
                         <z>0</z>
                         <width>12</width>
                         <height>12</height>
@@ -5875,7 +5887,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>3296</y>
+                        <y>3312</y>
                         <z>0</z>
                         <width>12</width>
                         <height>12</height>
@@ -6186,7 +6198,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fade" uid="400">
+                <instance type="FadeOut" uid="400">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

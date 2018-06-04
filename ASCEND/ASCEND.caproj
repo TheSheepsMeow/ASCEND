@@ -2,10 +2,10 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.60</version>
+    <version>0.61</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
-    <author-website>http://www.thesheepsmeow.com</author-website>
+    <author-website>https://www.thesheepsmeow.com</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3jv3hs0fp0y98</unique-id>
     <saved-with-version>25900</saved-with-version>
@@ -37,7 +37,10 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -365,7 +368,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Fade" sid="177159670200380">
+            <object-type name="FadeOut" sid="177159670200380">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="746942715147061">
@@ -448,7 +451,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833028947523331" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\MEOW\ASCEND\Title\Retry_01.png">
+                        <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="D:\MEOW\ASCEND\Title\Retry_01.png">
                             <collision-poly>
                                 <point x="0" y="0" />
                                 <point x="0.992537" y="0.00757576" />
@@ -502,6 +505,68 @@
                 </behaviors>
                 <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
             </object-type>
+            <object-type name="levelButton" sid="813016657884801">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="id" sid="706478726922630" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="633457921648051" speed="5">
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Play_01.png">
+                            <collision-poly>
+                                <point x="0.00917431" y="0.00980392" />
+                                <point x="0.990826" y="0.00980392" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Play_02.png">
+                            <collision-poly>
+                                <point x="0.00917431" y="0.00980392" />
+                                <point x="0.990826" y="0.00980392" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="531830479657987" speed="10">
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\MEOW\ASCEND\Title\Play_Clicked.png">
+                            <collision-poly>
+                                <point x="0.275229" y="0.294118" />
+                                <point x="0.495413" y="0.235294" />
+                                <point x="0.669725" y="0.352941" />
+                                <point x="0.862385" y="0.5" />
+                                <point x="0.669725" y="0.647059" />
+                                <point x="0.495413" y="0.754902" />
+                                <point x="0.275229" y="0.705882" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Locked" pingpong="0" repeatcount="1" repeatto="0" sid="615160443496116" speed="5">
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.00917431" y="0.00980392" />
+                                <point x="0.990826" y="0.00980392" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FadeIn" sid="283927470204289">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="765852837767494">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="584032692692774" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Title">
             <object-type name="AscendTitle" sid="671352903858488">
@@ -523,6 +588,11 @@
             </object-type>
             <object-type name="bgSheeps" sid="222998529406077">
                 <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="829662629414079">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
                 <texture original-source="C:\Users\Pitchfork\Desktop\tilinesheeps.png" />
             </object-type>
             <object-type name="loaderProgress" sid="928681384944599">
@@ -623,10 +693,24 @@
             </object-type>
             <object-type name="thesheepsmeow" sid="166592917158341">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="734758690425901">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568578449083981" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep0.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Pitchfork\Desktop\sheep1.png" />
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568578449083981" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\thesheepsmeow_logo.png">
+                            <collision-poly>
+                                <point x="0.102" y="0.17" />
+                                <point x="0.5" y="0.273333" />
+                                <point x="0.98" y="0.5" />
+                                <point x="0.892" y="0.82" />
+                                <point x="0.5" y="0.821667" />
+                                <point x="0.131" y="0.781667" />
+                                <point x="0.024" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -641,6 +725,41 @@
             <object-type name="textResetScores" sid="823560339277898">
                 <plugin id="Spritefont2" />
                 <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+            </object-type>
+            <object-type name="textLevelSelect" sid="371780902205708">
+                <plugin id="Spritefont2" />
+                <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+            </object-type>
+            <object-type name="textLevelSelect2" sid="290502755610342">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="id" sid="733673498503281" type="number" />
+                </instance-variables>
+                <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+            </object-type>
+            <object-type name="TSM_icon" sid="460107443306893">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="889518911417622">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818712508189426" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\thesheepsmeow_icon_small.png">
+                            <collision-poly>
+                                <point x="0.150391" y="0.150391" />
+                                <point x="0.5" y="0.0253906" />
+                                <point x="0.857422" y="0.142578" />
+                                <point x="0.932617" y="0.5" />
+                                <point x="0.797852" y="0.797852" />
+                                <point x="0.5" y="0.876953" />
+                                <point x="0.1875" y="0.8125" />
+                                <point x="0.0195313" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="System">
@@ -1224,6 +1343,14 @@
                         <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602663734209179" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1288,6 +1415,61 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="GoalClone" sid="420840736485921">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="244858768496825">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="993883846932394">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903893015251728" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.151515" y="0.164773" />
+                                <point x="0.856061" y="0.166667" />
+                                <point x="0.854167" y="0.833334" />
+                                <point x="0.149621" y="0.83144" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Ending">
+            <object-type name="endingAnimation" sid="888120066697453">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="872786315155157">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863012510816579" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="endingParticles" sid="795936632932646">
+                <plugin id="Particles" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="648299708076447">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
         </object-folder>
     </object-folder>
     <families>
@@ -1337,12 +1519,16 @@
         <layout>EndScreen.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Game.xml</event-sheet>
-        <event-sheet>End.xml</event-sheet>
-        <event-sheet>DevCodes.xml</event-sheet>
-        <event-sheet>Title.xml</event-sheet>
-        <event-sheet>LocalStorage.xml</event-sheet>
-        <event-sheet>Loader.xml</event-sheet>
+        <event-folder name="Game">
+            <event-sheet>Game.xml</event-sheet>
+            <event-sheet>End.xml</event-sheet>
+        </event-folder>
+        <event-folder name="System">
+            <event-sheet>Title.xml</event-sheet>
+            <event-sheet>DevCodes.xml</event-sheet>
+            <event-sheet>Loader.xml</event-sheet>
+            <event-sheet>LocalStorage.xml</event-sheet>
+        </event-folder>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="2">
