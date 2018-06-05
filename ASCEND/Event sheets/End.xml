@@ -51,10 +51,20 @@
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="587976331680404" type="System">
-                            <param id="0" name="Seconds">2</param>
+                            <param id="0" name="Seconds">2.1</param>
                         </action>
                         <action id="0" name="Set spraying" sid="299958677515469" type="endingParticles">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="579438167795842" type="transformFade">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="566836917075841" type="transformFade" />
+                        <action disabled="1" id="-16" name="Wait" sid="449781468022964" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="625424250372042" type="endingAnimation">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -95,7 +105,12 @@
                     </actions>
                 </event-block>
                 <event-block sid="448770175947816">
-                    <conditions />
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="781829304201358" type="endingAnimation">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">155</param>
+                        </condition>
+                    </conditions>
                     <actions />
                 </event-block>
                 <event-block sid="638572085467408">

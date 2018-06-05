@@ -3332,6 +3332,41 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <comment>Dsetroys bullet and creates explosion.</comment>
+                        <event-block sid="999682498984194">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="806056114903655" type="BulletRight">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">295</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="371874101850574" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="422406632266101" type="BulletRight">
+                                    <param id="0" name="Object">BulletExplodeRight</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="836284241929694" type="BulletRight" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="723470764423057">
+                            <conditions>
+                                <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="408445456080891" type="BulletLeft">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Distance">295</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="409521137479921" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="233281677505161" type="BulletLeft">
+                                    <param id="0" name="Object">BulletExplodeLeft</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="269965448420127" type="BulletLeft" />
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block any="1" sid="541743425027581">
@@ -3376,6 +3411,40 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="355858051633074">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="727258948301514" type="ShootLeft">
+                                            <param id="0" name="Speed">3</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="448651832374908" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="185739219969045" type="ShootLeft">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="933116476248472" type="ShootLeft">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="406254990432636">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="128886925225842" type="ShootRight">
+                                            <param id="0" name="Speed">3</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="373349082764469" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                        <action id="6" name="Set speed" sid="422531567628210" type="ShootRight">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="582525002498504" type="ShootRight">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="101004491814317">
                                     <conditions>
                                         <condition id="-19" name="Pick all" sid="306776876799952" type="System">
@@ -3456,24 +3525,24 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="230837222612143" type="BulletLeft">
+                        <action disabled="1" id="0" name="Spawn another object" sid="230837222612143" type="BulletLeft">
                             <param id="0" name="Object">BulletFadeLeft</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-29" name="Move to object" sid="736696233862355" type="BulletFadeLeft">
+                        <action disabled="1" id="-29" name="Move to object" sid="736696233862355" type="BulletFadeLeft">
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Object">BulletLeft</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="482840560386620" type="BulletRight">
+                        <action disabled="1" id="0" name="Spawn another object" sid="482840560386620" type="BulletRight">
                             <param id="0" name="Object">BulletFadeRight</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="305602433284289" type="BulletFadeRight">
+                        <action disabled="1" id="-8" name="Set angle" sid="305602433284289" type="BulletFadeRight">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action id="-29" name="Move to object" sid="435703405494957" type="BulletFadeRight">
+                        <action disabled="1" id="-29" name="Move to object" sid="435703405494957" type="BulletFadeRight">
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Object">BulletRight</param>
                         </action>
