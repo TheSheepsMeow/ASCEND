@@ -3525,24 +3525,24 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Spawn another object" sid="230837222612143" type="BulletLeft">
+                        <action id="0" name="Spawn another object" sid="230837222612143" type="BulletLeft">
                             <param id="0" name="Object">BulletFadeLeft</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action disabled="1" id="-29" name="Move to object" sid="736696233862355" type="BulletFadeLeft">
+                        <action id="-29" name="Move to object" sid="736696233862355" type="BulletFadeLeft">
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Object">BulletLeft</param>
                         </action>
-                        <action disabled="1" id="0" name="Spawn another object" sid="482840560386620" type="BulletRight">
+                        <action id="0" name="Spawn another object" sid="482840560386620" type="BulletRight">
                             <param id="0" name="Object">BulletFadeRight</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action disabled="1" id="-8" name="Set angle" sid="305602433284289" type="BulletFadeRight">
+                        <action id="-8" name="Set angle" sid="305602433284289" type="BulletFadeRight">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action disabled="1" id="-29" name="Move to object" sid="435703405494957" type="BulletFadeRight">
+                        <action id="-29" name="Move to object" sid="435703405494957" type="BulletFadeRight">
                             <param id="0" name="Where">1</param>
                             <param id="1" name="Object">BulletRight</param>
                         </action>
