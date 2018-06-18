@@ -1361,24 +1361,24 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bullet" uid="24">
+                <instance type="bulletParticles" uid="24">
                     <properties>
                         <rate>30</rate>
                         <spray-cone>360</spray-cone>
                         <type>One-shot</type>
                         <initial-particle-properties></initial-particle-properties>
-                        <speed>150</speed>
-                        <size>4</size>
+                        <speed>100</speed>
+                        <size>2</size>
                         <opacity>100</opacity>
-                        <grow-rate>0</grow-rate>
-                        <x-randomiser>0</x-randomiser>
-                        <y-randomiser>0</y-randomiser>
-                        <speed-randomiser->0</speed-randomiser->
-                        <size-randomiser>0</size-randomiser>
-                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <grow-rate>2</grow-rate>
+                        <x-randomiser>2</x-randomiser>
+                        <y-randomiser>2</y-randomiser>
+                        <speed-randomiser->100</speed-randomiser->
+                        <size-randomiser>2</size-randomiser>
+                        <grow-rate-randomiser>2</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
-                        <acceleration>-200</acceleration>
-                        <gravity>0</gravity>
+                        <acceleration>-100</acceleration>
+                        <gravity>100</gravity>
                         <angle-randomiser>0</angle-randomiser>
                         <speed-randomiser>800</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
@@ -1680,7 +1680,7 @@
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>0.1</fade-out-time>
+                                <fade-out-time>0.2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -1691,8 +1691,8 @@
                         <x>4.76975441</x>
                         <y>2057.520751953</y>
                         <z>0</z>
-                        <width>52.460186005</width>
-                        <height>52.460186005</height>
+                        <width>26.5</width>
+                        <height>26.5</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1713,7 +1713,7 @@
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>0.1</fade-out-time>
+                                <fade-out-time>0.2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -1724,8 +1724,8 @@
                         <x>333</x>
                         <y>2061</y>
                         <z>0</z>
-                        <width>52.459999084</width>
-                        <height>52.459999084</height>
+                        <width>26.5</width>
+                        <height>26.5</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

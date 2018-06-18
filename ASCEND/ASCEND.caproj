@@ -2,7 +2,7 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.61</version>
+    <version>0.63</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com</author-website>
@@ -69,7 +69,7 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Objects Bullets">
-            <object-type name="bullet" sid="523336542614889">
+            <object-type name="bulletParticles" sid="523336542614889">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
@@ -168,9 +168,15 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="227088313567102" speed="8">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -381,9 +387,15 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839149785721197" speed="8">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -443,8 +455,20 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952693687686220" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952693687686220" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GJ Lee\Desktop\bulletCrash3.png">
+                            <collision-poly>
+                                <point x="0.486301" y="0.5" />
+                                <point x="0.383562" y="0.383562" />
+                                <point x="0.5" y="0.130137" />
+                                <point x="0.815068" y="0.184932" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.863014" />
+                                <point x="0.5" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.5" y="0.5" />
                                 <point x="0.5" y="0.136986" />
@@ -467,7 +491,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359383321905155" speed="5">
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359383321905155" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\GJ Lee\Desktop\bulletCrash3.png">
                             <collision-poly>
                                 <point x="0.513699" y="0.5" />
@@ -480,8 +504,24 @@
                                 <point x="0.5" y="0.5" />
                             </collision-poly>
                         </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.863014" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0" y="0.5" />
+                                <point x="0.184932" y="0.184932" />
+                                <point x="0.5" y="0.130137" />
+                                <point x="0.616438" y="0.383562" />
+                                <point x="0.513699" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="bulletParticlesLight" sid="219419876944603">
+                <plugin id="Particles" />
+                <texture />
             </object-type>
         </object-folder>
         <object-folder name="UI">
@@ -900,6 +940,23 @@
                                 <point x="0.0195313" y="0.5" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="moregames2" sid="370965642517243">
+                <plugin id="NinePatch" />
+                <texture original-source="C:\MEOW\ASCEND\Title\MoreGames.png" />
+            </object-type>
+            <object-type name="CoolmathGames320x480Optimized" sid="236494326740669">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="412389386607273">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865046350652315" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\brian\Downloads\CoolmathGames-320x480-Optimized.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1677,6 +1734,19 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="levelTriggers" plugin-id="Sprite" sid="433890620802801">
+            <members>
+                <member>levelTrigger1</member>
+                <member>levelTrigger2</member>
+                <member>levelTrigger3</member>
+                <member>levelTrigger4</member>
+                <member>levelTrigger5</member>
+                <member>levelTrigger6</member>
+                <member>levelTrigger7</member>
+                <member>levelTrigger8</member>
+                <member>levelTrigger9</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Loader.xml</layout>
@@ -1690,6 +1760,10 @@
         <event-folder name="Game">
             <event-sheet>Game.xml</event-sheet>
             <event-sheet>End.xml</event-sheet>
+            <event-sheet>Music.xml</event-sheet>
+            <event-sheet>Hazards.xml</event-sheet>
+            <event-sheet>UI and Pause.xml</event-sheet>
+            <event-sheet>Background.xml</event-sheet>
         </event-folder>
         <event-folder name="System">
             <event-sheet>Title.xml</event-sheet>
