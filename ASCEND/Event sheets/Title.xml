@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Title</name>
     <events>
+        <include>DevCodes</include>
         <include>Hazards</include>
         <include>LocalStorage</include>
         <variable constant="0" name="isMuted" sid="224088413067481" static="0" type="number">0</variable>
@@ -165,6 +166,9 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="643156782931501" type="Keyboard">
                             <param id="0" name="Key">13</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="280173969298176" type="Keyboard">
+                            <param id="0" name="Key">38</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -531,6 +535,38 @@
                             <param id="0" name="Height">lerp(AscendTitle.Height, 480, 0.05)</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="390772250542395" title="Controls Display">
+            <sub-events>
+                <event-block sid="895569187040944">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="381764352535231">
+                    <conditions>
+                        <condition id="-20" name="Is on mobile device" sid="395502019416745" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="325118964965958" type="textControls">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126664878299406">
+                    <conditions>
+                        <condition id="-20" inverted="1" name="Is on mobile device" sid="765198997429619" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="808250884061651" type="textControls">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="664053423285127">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

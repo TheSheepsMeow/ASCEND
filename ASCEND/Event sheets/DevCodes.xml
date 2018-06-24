@@ -132,7 +132,7 @@
                 <event-block disabled="1" sid="920599651456395">
                     <conditions />
                     <actions>
-                        <action disabled="1" id="8" name="Set silent" sid="667016431929749" type="Audio">
+                        <action id="8" name="Set silent" sid="667016431929749" type="Audio">
                             <param id="0" name="Mode">0</param>
                         </action>
                     </actions>

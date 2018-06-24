@@ -960,6 +960,15 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="textControls" sid="604983919381763">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="555358799081431">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
+            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Audio" sid="781551516656332">

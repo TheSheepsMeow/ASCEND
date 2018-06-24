@@ -328,7 +328,7 @@
                         <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>BRIAN CHUNG, GJ LEE, JOSIAH HUNT, WARREN SAVAGE, REBECA JIMENEZ</text>
-                        <scale>0.075</scale>
+                        <scale>0.1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -340,10 +340,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>74.754119873</x>
+                        <x>90.754119873</x>
                         <y>418.97567749</y>
                         <z>0</z>
-                        <width>128</width>
+                        <width>160</width>
                         <height>22.093048096</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -432,8 +432,8 @@
                         <character-width>47</character-width>
                         <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>Brian Chung, GJ Lee, Josiah Hunt, Warren Savage, Rebeca Jimenez</text>
-                        <scale>0.08</scale>
+                        <text>BRIAN CHUNG, GJ LEE, JOSIAH HUNT, WARREN SAVAGE, REBECA JIMENEZ</text>
+                        <scale>0.1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -445,10 +445,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>131.469818115</x>
+                        <x>144</x>
                         <y>462.265014648</y>
                         <z>0</z>
-                        <width>134.939651489</width>
+                        <width>160</width>
                         <height>19.469970703</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -662,6 +662,47 @@
                         <z>0</z>
                         <width>43.817806244</width>
                         <height>43.817806244</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="textControls" uid="451">
+                    <properties>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>use mouse or up/down keys</text>
+                        <scale>0.1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>3</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>276</x>
+                        <y>381.734985352</y>
+                        <z>0</z>
+                        <width>88</width>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
