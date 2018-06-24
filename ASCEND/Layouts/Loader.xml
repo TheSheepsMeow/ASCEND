@@ -215,8 +215,8 @@
                 </instance>
                 <instance type="textTitle" uid="414">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>loading ...</text>
                         <scale>0.2</scale>

@@ -2,7 +2,7 @@
 <c2project>
     <name>ASCEND</name>
     <description></description>
-    <version>0.63</version>
+    <version>1.01</version>
     <author>The Sheep&apos;s Meow</author>
     <author-email>games@thesheepsmeow.com</author-email>
     <author-website>https://www.thesheepsmeow.com</author-website>
@@ -565,7 +565,7 @@
             </object-type>
             <object-type name="resetsText" sid="272266954318724">
                 <plugin id="Spritefont2" />
-                <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="menuButton" sid="822356945027358">
                 <plugin id="Sprite" />
@@ -605,7 +605,7 @@
             </object-type>
             <object-type name="LevelsUI" sid="812776249321660">
                 <plugin id="Spritefont2" />
-                <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="pauseBG" sid="951353399552454">
                 <plugin id="TiledBg" />
@@ -685,7 +685,7 @@
                         <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
-                <texture original-source="C:\Users\Josiah\Desktop\Internship\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="levelButton" sid="813016657884801">
                 <plugin id="Sprite" />
@@ -867,11 +867,11 @@
             </object-type>
             <object-type name="textTitle" sid="301819297354044">
                 <plugin id="Spritefont2" />
-                <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="textTitle2" sid="822147733638018">
                 <plugin id="Spritefont2" />
-                <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="thesheepsmeow" sid="166592917158341">
                 <plugin id="Sprite" />
@@ -898,11 +898,11 @@
             </object-type>
             <object-type name="textMenu" sid="267605995965218">
                 <plugin id="Spritefont2" />
-                <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="textScore" sid="996187064462071">
                 <plugin id="Spritefont2" />
-                <texture original-source="D:\MEOW\ASCEND\shadowmonospace.png" />
+                <texture original-source="C:\Users\GJ Lee\Desktop\SpriteFont_RobotoMono_Light_(72)_[1,1,1,1]_47x82.png" />
             </object-type>
             <object-type name="textResetScores" sid="823560339277898">
                 <plugin id="Spritefont2" />
