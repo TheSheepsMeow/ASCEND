@@ -2339,8 +2339,8 @@
             <instances>
                 <instance type="Timer" uid="230">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>00:00</text>
                         <scale>0.35</scale>
@@ -2381,8 +2381,8 @@
                 </instance>
                 <instance type="resetsText" uid="228">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>resets: 0</text>
                         <scale>0.25</scale>
@@ -2433,8 +2433,8 @@
                 </instance>
                 <instance type="LevelsUI" uid="53">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>1-1</text>
                         <scale>0.35</scale>
@@ -2546,8 +2546,8 @@
                 </instance>
                 <instance type="textMenu" uid="420">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>PAUSED</text>
                         <scale>0.5</scale>
@@ -2576,8 +2576,8 @@
                 </instance>
                 <instance type="textMenu" uid="421">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>tap anywhere to continue</text>
                         <scale>0.2</scale>

@@ -191,8 +191,8 @@
             <instances>
                 <instance type="resetsText" uid="54">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
                         <scale>0.4</scale>
@@ -221,8 +221,8 @@
                 </instance>
                 <instance type="Timer" uid="232">
                     <properties>
-                        <character-width>45</character-width>
-                        <character-height>77</character-height>
+                        <character-width>47</character-width>
+                        <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>00:00</text>
                         <scale>0.35</scale>
