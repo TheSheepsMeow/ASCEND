@@ -328,7 +328,7 @@
                         <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>BRIAN CHUNG, GJ LEE, JOSIAH HUNT, WARREN SAVAGE, REBECA JIMENEZ</text>
-                        <scale>0.1</scale>
+                        <scale>0.11</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -340,13 +340,35 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>90.754119873</x>
+                        <x>98.754119873</x>
                         <y>418.97567749</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>176</width>
                         <height>22.093048096</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="menuButtonReset" uid="385">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>259.774993896</x>
+                        <y>80</y>
+                        <z>0</z>
+                        <width>42.24961853</width>
+                        <height>29.432319641</height>
+                        <depth>0</depth>
+                        <hotspotX>0.505617976</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -433,7 +455,7 @@
                         <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>BRIAN CHUNG, GJ LEE, JOSIAH HUNT, WARREN SAVAGE, REBECA JIMENEZ</text>
-                        <scale>0.1</scale>
+                        <scale>0.12</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -445,11 +467,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>144</x>
-                        <y>462.265014648</y>
+                        <x>160</x>
+                        <y>460</y>
                         <z>0</z>
-                        <width>160</width>
-                        <height>19.469970703</height>
+                        <width>192</width>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -476,28 +498,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="menuButtonReset" uid="385">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>259.774993896</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>42.24961853</width>
-                        <height>29.432319641</height>
-                        <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="menuButton" uid="390">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -675,7 +675,7 @@
                         <character-height>82</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>use mouse or up/down keys</text>
-                        <scale>0.1</scale>
+                        <scale>0.12</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -698,10 +698,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>276</x>
-                        <y>381.734985352</y>
+                        <x>280</x>
+                        <y>384</y>
                         <z>0</z>
-                        <width>88</width>
+                        <width>96</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
