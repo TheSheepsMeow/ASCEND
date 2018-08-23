@@ -117,6 +117,46 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Second value">&quot;www.thesheepsmeow.com&quot;</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="520846893954676" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;www.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="950359650842469" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="189021843160221" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;stage.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="510528046629776" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m-stage.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="519566518405496" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;dev.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="746479517448138" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m-dev.coolmathgames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="138789728483701" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;m.cmatgame.local&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="378165746220646" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;cmatgame.local&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Set group active" sid="511795179580354" type="System">
